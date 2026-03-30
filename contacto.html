@@ -10,7 +10,7 @@
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg custom-navbar fixed-top">
+<nav class="navbar navbar-expand-lg custom-navbar fixed-top scrolled">
   <div class="container-fluid px-0">
     <div class="logo-container">
       <img src="https://res.cloudinary.com/daib0eknj/image/upload/v1770840245/Logo_H2O_st7uih.png" alt="H2O Logo">
@@ -22,12 +22,10 @@
       <ul class="navbar-nav gap-lg-5 text-center">
         <li class="nav-item dropdown-custom">
           <button class="nav-link qs-btn" type="button">QUIÉNES SOMOS <span class="dots">⋮</span></button>
-          <div class="qs-menu">
-                            <div class="qs-menu" role="menu" aria-label="Quiénes somos">
-                                <a class="qs-item" href="marco-estrategico.html">Marco estratégico</a>
-                                <a class="qs-item" href="nuestra-trayectoria.html">Nuestra trayectoria</a>
-                                <a class="qs-item" href="compromiso.html">Compromiso</a>
-                            </div>
+          <div class="qs-menu" role="menu" aria-label="Quiénes somos">
+            <a class="qs-item" href="marco-estrategico.html">Marco estratégico</a>
+            <a class="qs-item" href="nuestra-trayectoria.html">Nuestra trayectoria</a>
+            <a class="qs-item" href="compromiso.html">Compromiso</a>
           </div>
         </li>
         <li class="nav-item"><a class="nav-link" href="servicios.html">SERVICIOS</a></li>
@@ -42,9 +40,46 @@
 
 <main style="padding-top:110px;">
   <section class="container py-5">
-    <h1 class="mb-3">Contacto</h1>
-    <p class="lead">Contáctanos para cotizaciones, soporte o información. Puedes colocar aquí un formulario o datos de contacto.</p>
-    <a href="index.html" class="btn btn-h2o mt-3">Volver al inicio</a>
+    <div class="row g-5 align-items-stretch">
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <h1 class="mb-3">Contáctanos</h1>
+        <p class="lead">¿Tienes dudas, necesitas una cotización o soporte? Completa el formulario y te responderemos pronto.</p>
+        <form id="contactForm" class="p-4 rounded shadow-sm bg-white" style="max-width: 520px;" action="https://formspree.io/f/mnqewzqg" method="POST">
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Tu nombre" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Correo electrónico</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="tucorreo@email.com" required>
+          </div>
+          <div class="mb-3">
+            <label for="telefono" class="form-label">Teléfono</label>
+            <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="Opcional">
+          </div>
+          <div class="mb-3">
+            <label for="mensaje" class="form-label">Mensaje</label>
+            <textarea class="form-control" id="mensaje" name="mensaje" rows="4" placeholder="¿En qué podemos ayudarte?" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-h2o w-100">Enviar mensaje</button>
+        </form>
+      </div>
+      <div class="col-lg-6 d-flex flex-column justify-content-center">
+        <div class="bg-light rounded p-4 h-100 shadow-sm mb-4 mb-lg-0">
+          <h4 class="mb-3 text-primary">Datos de contacto</h4>
+          <ul class="list-unstyled mb-4">
+            <li class="mb-2"><strong>Dirección:</strong> Autopista Medellín Km 7.8, Parque Innova, Bodega 2-3</li>
+            <li class="mb-2"><strong>Teléfono:</strong> <a href="tel:+573001234567" class="text-decoration-none text-dark">+57 300 123 4567</a></li>
+            <li class="mb-2"><strong>Email:</strong> <a href="mailto:info@h2ocolombia.com" class="text-decoration-none text-dark">info@h2ocolombia.com</a></li>
+          </ul>
+          <h5 class="mb-2">Horario de atención</h5>
+          <p class="mb-0">Lunes a Viernes: 8:00 am - 5:30 pm<br>Sábados: 8:00 am - 1:00 pm</p>
+        </div>
+        <div class="d-flex justify-content-lg-end justify-content-center">
+          <a href="index.html" class="btn btn-h2o mt-3">Volver al inicio</a>
+        </div>
+      </div>
+    </div>
   </section>
 </main>
 
@@ -58,7 +93,7 @@
         <p>Soluciones integrales en tratamiento de agua. Comprometidos con la sostenibilidad y la calidad.</p>
         <p style="margin-top: 15px;">
           <strong>Dirección:</strong><br>
-          Calle 45 #12-34, Bogotá D.C., Colombia
+          Autopista Medellín Km 7.8, Parque Innova, Bodega 2-3
         </p>
       </div>
 
@@ -101,16 +136,52 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="js/scripts.js"></script>
-    <!-- Scroll efecto navbar -->
-    <script>
-    window.addEventListener("scroll", function() {
-    let navbar = document.querySelector(".custom-navbar");
-    if (window.scrollY > 50) {
-        navbar.classList.add("scrolled");
-    } else {
-        navbar.classList.remove("scrolled");
+<!-- SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+// Navbar SIEMPRE oscura en contacto.html
+// Eliminar efecto de scroll para la navbar en esta vista
+// Confirmación de envío con SweetAlert
+  document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById("contactForm");
+    if(form) {
+      form.addEventListener("submit", function(e) {
+        e.preventDefault();
+        const data = new FormData(form);
+        fetch(form.action, {
+          method: "POST",
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        })
+        .then(response => {
+          if(response.ok) {
+            form.reset();
+            Swal.fire({
+              icon: 'success',
+              title: '¡Mensaje enviado!',
+              text: 'Gracias por contactarnos. Te responderemos pronto.',
+              confirmButtonColor: '#1BB6C9'
+            });
+          } else {
+            Swal.fire({
+              icon: 'error',
+              title: 'Error',
+              text: 'Hubo un problema al enviar el mensaje. Intenta de nuevo más tarde.',
+              confirmButtonColor: '#1BB6C9'
+            });
+          }
+        })
+        .catch(() => {
+          Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Hubo un problema al enviar el mensaje. Intenta de nuevo más tarde.',
+            confirmButtonColor: '#1BB6C9'
+          });
+        });
+      });
     }
-    });
-    </script>
+  });
+</script>
 </body>
 </html>
