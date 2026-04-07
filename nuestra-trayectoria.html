@@ -3,112 +3,360 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nuestra Cultura - H2O COLOMBIA SAS</title>
+  <title>Nuestra Trayectoria - H2O COLOMBIA SAS</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/trayectoria.css">
 </head>
 <body>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg custom-navbar fixed-top">
-  <div class="container-fluid px-0">
-    <div class="logo-container">
-      <img src="https://res.cloudinary.com/daib0eknj/image/upload/v1770840245/Logo_H2O_st7uih.png" alt="H2O Logo">
-    </div>
-    <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-center" id="menu">
-      <ul class="navbar-nav gap-lg-5 text-center">
-        <li class="nav-item dropdown-custom">
-          <button class="nav-link qs-btn" type="button">QUIÉNES SOMOS <span class="dots">⋮</span></button>
-                            <div class="qs-menu" role="menu" aria-label="Quiénes somos">
-                                <a class="qs-item" href="marco-estrategico.html">Marco estratégico</a>
-                                <a class="qs-item" href="nuestra-trayectoria.html">Nuestra trayectoria</a>
-                                <a class="qs-item" href="compromiso.html">Compromiso</a>
-                            </div>
-        </li>
-        <li class="nav-item"><a class="nav-link" href="servicios.html">SERVICIOS</a></li>
-        <li class="nav-item"><a class="nav-link" href="proyectos.html">PROYECTOS</a></li>
-      </ul>
-    </div>
-    <div class="contact-btn d-none d-lg-block me-4">
-      <a href="contacto.html" class="btn-contact">CONTACTO</a>
-    </div>
-  </div>
-</nav>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg custom-navbar fixed-top">
+    <div class="container-fluid px-0">
 
-<main style="padding-top:110px;">
-  <section class="container py-5">
-    <h1 class="mb-3">Nuestra Cultura</h1>
-    <p class="lead">Aquí va el contenido sobre la cultura organizacional: valores, equipo, prácticas y clima laboral.</p>
-    <a href="index.html" class="btn btn-h2o mt-3">Volver al inicio</a>
-  </section>
-</main>
-
-<!-- Footer -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-content">
-      <!-- Columna 1: Sobre nosotros -->
-      <div class="footer-section">
-        <h4>H2O COLOMBIA SAS</h4>
-        <p>Soluciones integrales en tratamiento de agua. Comprometidos con la sostenibilidad y la calidad.</p>
-        <p style="margin-top: 15px;">
-          <strong>Dirección:</strong><br>
-          Autopista Medellín Km 7.8, Parque Innova, Bodega 2-3
-        </p>
+      <div class="logo-container">
+        <img src="https://res.cloudinary.com/daib0eknj/image/upload/v1770840245/Logo_H2O_st7uih.png" alt="H2O Logo">
       </div>
 
-      <!-- Columna 2: Enlaces Rápidos -->
-      <div class="footer-section">
-        <h4>Enlaces Rápidos</h4>
-        <ul class="footer-links">
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="servicios.html">Servicios</a></li>
-          <li><a href="proyectos.html">Proyectos</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
+      <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-center" id="menu">
+        <ul class="navbar-nav gap-lg-5 text-center">
+          <li class="nav-item dropdown-custom">
+            <button class="nav-link qs-btn" type="button" aria-expanded="false" aria-haspopup="true">
+              QUIÉNES SOMOS <span class="dots">⋮</span>
+            </button>
+            <div class="qs-menu" id="qsMenu">
+              <a class="qs-item" href="marco-estrategico.html">Marco estratégico</a>
+              <a class="qs-item active" href="nuestra-trayectoria.html">Nuestra trayectoria</a>
+              <a class="qs-item" href="compromiso.html">Compromiso</a>
+            </div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="servicios.html">SERVICIOS</a></li>
+          <li class="nav-item"><a class="nav-link" href="proyectos.html">PROYECTOS</a></li>
         </ul>
       </div>
 
-      <!-- Columna 3: Políticas -->
-      <div class="footer-section">
-        <h4>Políticas</h4>
-        <ul class="footer-links">
-          <li><a href="#">Política de Privacidad</a></li>
-          <li><a href="#">Términos y Condiciones</a></li>
-          <li><a href="#">Política de Cookies</a></li>
-          <li><a href="#">Aviso Legal</a></li>
-        </ul>
+      <div class="contact-btn d-none d-lg-block me-4">
+        <a href="contacto.html" class="btn-contact">CONTACTO</a>
+      </div>
+
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ── HERO ── -->
+    <section class="page-hero" style="background-image: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2000&auto=format&fit=crop');">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7">
+            <div class="page-hero-title">
+              <span class="hero-label">Quiénes Somos</span>
+              <span class="hero-main">Nuestra Trayectoria</span>
+              <p class="hero-tagline">El equipo y la cultura que construyen H2O Colombia cada día.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-content">
+      <div class="container">
+
+        <!-- ── INTRO ── -->
+        <div class="intro-section">
+          <h2>Una Empresa que se Construye desde Adentro</h2>
+          <p>En H2O Colombia SAS creemos que la verdadera transformación del agua comienza con las personas. Nuestra cultura organizacional está basada en la confianza, el crecimiento colectivo y el compromiso genuino con el entorno. Aquí, cada colaborador es parte activa de un propósito que trasciende la operación diaria.</p>
+        </div>
+
+        <!-- ── NUESTRO EQUIPO — 4 tarjetas foto-forward ── -->
+        <div class="equipo-section">
+          <div class="seccion-header">
+            <h2>Las Personas detrás de H2O</h2>
+          </div>
+
+          <div class="equipo-grid">
+
+            <!-- Card 1 — Director General -->
+            <div class="equipo-card">
+              <div class="equipo-foto-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop"
+                  alt="Director General"
+                  class="equipo-foto">
+                <span class="equipo-rol">Dirección General</span>
+              </div>
+              <div class="equipo-body">
+                <h4>Imagen de referencia</h4>
+                <p>Lidera la estrategia corporativa con más de 20 años de experiencia en gestión ambiental y tratamiento de recursos hídricos en Colombia.</p>
+              </div>
+            </div>
+
+            <!-- Card 2 — Directora de Ingeniería -->
+            <div class="equipo-card">
+              <div class="equipo-foto-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop"
+                  alt="Directora de Ingeniería"
+                  class="equipo-foto">
+                <span class="equipo-rol">Ingeniería &amp; Proyectos</span>
+              </div>
+              <div class="equipo-body">
+                <h4>Imagen de referencia</h4>
+                <p>Coordina los equipos técnicos de campo, garantizando estándares de calidad en cada instalación y mantenimiento de sistemas.</p>
+              </div>
+            </div>
+
+            <!-- Card 3 — Director de Sostenibilidad -->
+            <div class="equipo-card">
+              <div class="equipo-foto-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=800&auto=format&fit=crop"
+                  alt="Director de Sostenibilidad"
+                  class="equipo-foto">
+                <span class="equipo-rol">Sostenibilidad</span>
+              </div>
+              <div class="equipo-body">
+                <h4>Imagen de referencia</h4>
+                <p>Diseña y ejecuta las políticas ambientales de la empresa, asegurando que cada proyecto cumpla con los más altos estándares ecológicos.</p>
+              </div>
+            </div>
+
+            <!-- Card 4 — Directora de Operaciones -->
+            <div class="equipo-card">
+              <div class="equipo-foto-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=800&auto=format&fit=crop"
+                  alt="Directora de Operaciones"
+                  class="equipo-foto">
+                <span class="equipo-rol">Operaciones</span>
+              </div>
+              <div class="equipo-body">
+                <h4>Imagen de referencia</h4>
+                <p>Gestiona la logística y ejecución de proyectos en campo garantizando plazos y estándares.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ── CÓMO TRABAJAMOS — 4 prácticas organizacionales ── -->
+        <div class="practicas-section">
+          <div class="seccion-header">
+            <h2>Cómo Trabajamos</h2>
+          </div>
+
+          <div class="practicas-grid">
+
+            <div class="practica-card">
+              <div class="practica-icon">🤝</div>
+              <div class="practica-texto">
+                <h4>Trabajo colaborativo</h4>
+                <p>Fomentamos equipos multidisciplinarios donde cada voz aporta valor y las decisiones se construyen en conjunto.</p>
+              </div>
+            </div>
+
+            <div class="practica-card">
+              <div class="practica-icon">📚</div>
+              <div class="practica-texto">
+                <h4>Aprendizaje continuo</h4>
+                <p>Invertimos en la formación de nuestros colaboradores con programas de capacitación técnica y liderazgo.</p>
+              </div>
+            </div>
+
+            <div class="practica-card">
+              <div class="practica-icon">🌱</div>
+              <div class="practica-texto">
+                <h4>Bienestar laboral</h4>
+                <p>Promovemos un ambiente de trabajo saludable, con horarios flexibles, beneficios y espacios de recreación.</p>
+              </div>
+            </div>
+
+            <div class="practica-card">
+              <div class="practica-icon">🏆</div>
+              <div class="practica-texto">
+                <h4>Reconocimiento</h4>
+                <p>Celebramos los logros individuales y colectivos, creando una cultura de motivación y orgullo por el trabajo bien hecho.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ── CLIMA ORGANIZACIONAL — barras + cita ── -->
+        <div class="clima-section">
+          <div class="seccion-header">
+            <h2>Clima Organizacional</h2>
+          </div>
+
+          <div class="clima-inner">
+
+            <!-- Métricas con barras de progreso -->
+            <div class="clima-metricas">
+
+              <div class="metrica-bar">
+                <div class="metrica-bar-header">
+                  <span>Satisfacción laboral</span>
+                  <span>92%</span>
+                </div>
+                <div class="barra-progreso">
+                  <div class="barra-fill" style="--target-width: 92%;"></div>
+                </div>
+              </div>
+
+              <div class="metrica-bar">
+                <div class="metrica-bar-header">
+                  <span>Orgullo de pertenencia</span>
+                  <span>95%</span>
+                </div>
+                <div class="barra-progreso">
+                  <div class="barra-fill" style="--target-width: 95%;"></div>
+                </div>
+              </div>
+
+              <div class="metrica-bar">
+                <div class="metrica-bar-header">
+                  <span>Recomendarían trabajar aquí</span>
+                  <span>88%</span>
+                </div>
+                <div class="barra-progreso">
+                  <div class="barra-fill" style="--target-width: 88%;"></div>
+                </div>
+              </div>
+
+              <div class="metrica-bar">
+                <div class="metrica-bar-header">
+                  <span>Equilibrio vida-trabajo</span>
+                  <span>85%</span>
+                </div>
+                <div class="barra-progreso">
+                  <div class="barra-fill" style="--target-width: 85%;"></div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Cita destacada oscura -->
+            <div class="clima-cita">
+              <p class="cita-texto">
+                "En H2O Colombia no solo tratamos el agua — construimos personas, equipos y comunidades que creen en lo que hacen."
+              </p>
+              <div class="cita-autor">
+                <img
+                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=100&auto=format&fit=crop"
+                  alt="Gerencia General"
+                  class="cita-autor-avatar">
+                <div class="cita-autor-info">
+                  <span>Gerencia General</span>
+                  <span>H2O Colombia SAS</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div><!-- /.container -->
+    </section>
+
+    <!-- ── ESTADÍSTICAS — banda oscura full-width ── -->
+    <section class="stats-band">
+      <div class="container">
+        <div class="stats-band-inner">
+          <div class="stats-grid">
+
+            <div class="stat-item">
+              <h4>45</h4>
+              <p>Colaboradores directos</p>
+            </div>
+
+            <div class="stat-item">
+              <h4>12 años</h4>
+              <p>Cultura organizacional</p>
+            </div>
+
+            <div class="stat-item">
+              <h4>94%</h4>
+              <p>Retención de talento</p>
+            </div>
+
+            <div class="stat-item">
+              <h4>4.8/5</h4>
+              <p>Clima laboral</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>H2O COLOMBIA SAS</h4>
+          <p>Soluciones integrales en tratamiento de agua. Comprometidos con la sostenibilidad y la calidad.</p>
+          <p style="margin-top:15px;"><strong>Dirección:</strong><br>Autopista Medellín Km 7.8, Parque Innova, Bodega 2-3</p>
+        </div>
+        <div class="footer-section">
+          <h4>Enlaces Rápidos</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="proyectos.html">Proyectos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Políticas</h4>
+          <ul class="footer-links">
+            <li><a href="#">Política de Privacidad</a></li>
+            <li><a href="#">Términos y Condiciones</a></li>
+            <li><a href="#">Política de Cookies</a></li>
+            <li><a href="#">Aviso Legal</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2026 H2O COLOMBIA SAS. Todos los derechos reservados.</p>
+        <div class="footer-social">
+          <a href="#" class="social-icon" title="Facebook">f</a>
+          <a href="#" class="social-icon" title="LinkedIn">in</a>
+          <a href="#" class="social-icon" title="Instagram">ig</a>
+        </div>
       </div>
     </div>
+  </footer>
 
-    <!-- Footer Bottom -->
-    <div class="footer-bottom">
-      <p class="footer-copyright">
-        © 2026 H2O COLOMBIA SAS. Todos los derechos reservados.
-      </p>
-      <div class="footer-social">
-        <a href="#" class="social-icon" title="Facebook">f</a>
-        <a href="#" class="social-icon" title="LinkedIn">in</a>
-        <a href="#" class="social-icon" title="Instagram">ig</a>
-      </div>
-    </div>
-  </div>
-</footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/scripts.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="js/scripts.js"></script>
-    <!-- Scroll efecto navbar -->
-    <script>
-    window.addEventListener("scroll", function() {
-    let navbar = document.querySelector(".custom-navbar");
-    if (window.scrollY > 50) {
-        navbar.classList.add("scrolled");
-    } else {
-        navbar.classList.remove("scrolled");
-    }
+  <script>
+    // Navbar scroll effect
+    window.addEventListener('scroll', function () {
+      document.querySelector('.custom-navbar').classList.toggle('scrolled', window.scrollY > 50);
     });
-    </script>
+
+    // Animate progress bars when they enter the viewport
+    const barObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.style.animationPlayState = 'running';
+        }
+      });
+    }, { threshold: 0.3 });
+
+    document.querySelectorAll('.barra-fill').forEach(function (bar) {
+      bar.style.animationPlayState = 'paused';
+      barObserver.observe(bar);
+    });
+  </script>
+
 </body>
 </html>

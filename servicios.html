@@ -6,51 +6,214 @@
   <title>Servicios - H2O COLOMBIA SAS</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/servicios.css">
 </head>
 <body>
 
-<!-- Navbar (copiado de index) -->
-<nav class="navbar navbar-expand-lg custom-navbar fixed-top">
-  <div class="container-fluid px-0">
-    <div class="logo-container">
-      <img src="https://res.cloudinary.com/daib0eknj/image/upload/v1770840245/Logo_H2O_st7uih.png" alt="H2O Logo">
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg custom-navbar fixed-top">
+    <div class="container-fluid px-0">
+      <div class="logo-container">
+        <img src="https://res.cloudinary.com/daib0eknj/image/upload/v1770840245/Logo_H2O_st7uih.png" alt="H2O Logo">
+      </div>
+      <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="menu">
+        <ul class="navbar-nav gap-lg-5 text-center">
+          <li class="nav-item dropdown-custom">
+            <button class="nav-link qs-btn" type="button" aria-expanded="false" aria-haspopup="true">
+              QUIÉNES SOMOS <span class="dots">⋮</span>
+            </button>
+            <div class="qs-menu" role="menu" aria-label="Quiénes somos">
+              <a class="qs-item" href="marco-estrategico.html">Marco estratégico</a>
+              <a class="qs-item" href="nuestra-trayectoria.html">Nuestra trayectoria</a>
+              <a class="qs-item" href="compromiso.html">Compromiso</a>
+            </div>
+          </li>
+          <li class="nav-item"><a class="nav-link active" href="servicios.html">SERVICIOS</a></li>
+          <li class="nav-item"><a class="nav-link" href="proyectos.html">PROYECTOS</a></li>
+        </ul>
+      </div>
+      <div class="contact-btn d-none d-lg-block me-4">
+        <a href="contacto.html" class="btn-contact">CONTACTO</a>
+      </div>
     </div>
-    <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-center" id="menu">
-      <ul class="navbar-nav gap-lg-5 text-center">
-        <li class="nav-item dropdown-custom">
-          <button class="nav-link qs-btn" type="button">QUIÉNES SOMOS <span class="dots">⋮</span></button>
-                            <div class="qs-menu" role="menu" aria-label="Quiénes somos">
-                                <a class="qs-item" href="marco-estrategico.html">Marco estratégico</a>
-                                <a class="qs-item" href="nuestra-trayectoria.html">Nuestra trayectoria</a>
-                                <a class="qs-item" href="compromiso.html">Compromiso</a>
-                            </div>
-        </li>
-        <li class="nav-item"><a class="nav-link" href="servicios.html">SERVICIOS</a></li>
-        <li class="nav-item"><a class="nav-link" href="proyectos.html">PROYECTOS</a></li>
-      </ul>
-    </div>
-    <div class="contact-btn d-none d-lg-block me-4">
-      <a href="contacto.html" class="btn-contact">CONTACTO</a>
-    </div>
-  </div>
-</nav>
+  </nav>
 
-<main style="padding-top:110px;">
-  <section class="container py-5">
-    <h1 class="mb-3">Servicios</h1>
-    <p class="lead">Descripción breve de los servicios que ofrece H2O COLOMBIA SAS. Aquí puedes agregar secciones de tratamiento, consultoría, diseño, mantenimiento, etc.</p>
-    <a href="index.html" class="btn btn-h2o mt-3">Volver al inicio</a>
+<main>
+
+  <!-- HERO -->
+  <section class="page-hero" style="background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2000&auto=format&fit=crop');">
+    <div class="hero-content">
+      <span class="hero-eyebrow">Soluciones Integrales</span>
+      <h1 class="hero-title">Nuestros Servicios</h1>
+      <p class="hero-subtitle">Tecnología, ingeniería y compromiso para el tratamiento del agua en Colombia.</p>
+    </div>
   </section>
+
+  <section class="page-content">
+    <div class="container">
+
+      <!-- SERVICIOS GRID -->
+      <div class="servicios-section">
+        <div class="section-header">
+          <h2>¿Qué hacemos?</h2>
+        </div>
+        <div class="servicios-grid">
+
+          <!-- 1 · Agua Potable -->
+          <div class="servicio-card">
+            <div class="servicio-icon">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                <path d="M12 2C12 2 4 10.5 4 15C4 19.42 7.58 23 12 23C16.42 23 20 19.42 20 15C20 10.5 12 2 12 2Z" fill="white"/>
+                <path d="M8 15C8 15 8.5 18 12 18" stroke="rgba(0,100,180,0.35)" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Agua Potable</h3>
+            <p>Diseño y construcción de plantas de tratamiento de agua potable para comunidades y empresas. Soluciones adaptadas a cada capacidad y normativa vigente.</p>
+          </div>
+
+          <!-- 2 · Aguas Residuales -->
+          <div class="servicio-card">
+            <div class="servicio-icon">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                <path d="M12 4V1L8 5L12 9V6C15.31 6 18 8.69 18 12C18 13.01 17.75 13.97 17.3 14.8L18.76 16.26C19.54 15.03 20 13.57 20 12C20 7.58 16.42 4 12 4Z" fill="white"/>
+                <path d="M12 18C8.69 18 6 15.31 6 12C6 10.99 6.25 10.03 6.7 9.2L5.24 7.74C4.46 8.97 4 10.43 4 12C4 16.42 7.58 20 12 20V23L16 19L12 15V18Z" fill="white"/>
+              </svg>
+            </div>
+            <h3>Aguas Residuales</h3>
+            <p>Tratamiento de aguas residuales industriales y municipales con tecnología de vanguardia. Cumplimiento garantizado de los límites de vertimiento establecidos.</p>
+          </div>
+
+          <!-- 3 · Ósmosis Inversa -->
+          <div class="servicio-card">
+            <div class="servicio-icon">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                <path d="M4 4H20V7L14 12V20H10V12L4 7V4Z" fill="white"/>
+                <circle cx="12" cy="15" r="2" fill="rgba(0,100,180,0.4)"/>
+              </svg>
+            </div>
+            <h3>Ósmosis Inversa</h3>
+            <p>Sistemas de filtración por ósmosis inversa para agua de alta pureza en industria y salud. Equipos de alto rendimiento con mínimo consumo energético.</p>
+          </div>
+
+          <!-- 4 · Operación y Mantenimiento -->
+          <div class="servicio-card">
+            <div class="servicio-icon">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                <path d="M19.14 12.94C19.18 12.64 19.2 12.33 19.2 12C19.2 11.68 19.18 11.36 19.13 11.06L21.16 9.48C21.34 9.34 21.39 9.07 21.28 8.87L19.36 5.55C19.24 5.33 18.99 5.26 18.77 5.33L16.38 6.29C15.88 5.91 15.35 5.59 14.76 5.35L14.4 2.81C14.36 2.57 14.16 2.4 13.92 2.4H10.08C9.84 2.4 9.65 2.57 9.61 2.81L9.25 5.35C8.66 5.59 8.12 5.92 7.63 6.29L5.24 5.33C5.01 5.25 4.76 5.33 4.64 5.55L2.72 8.87C2.6 9.08 2.65 9.34 2.84 9.48L4.87 11.06C4.82 11.36 4.8 11.69 4.8 12C4.8 12.31 4.82 12.64 4.87 12.94L2.84 14.52C2.65 14.66 2.6 14.93 2.72 15.13L4.64 18.45C4.76 18.67 5.01 18.74 5.24 18.67L7.63 17.71C8.12 18.09 8.66 18.41 9.25 18.65L9.61 21.19C9.65 21.43 9.84 21.6 10.08 21.6H13.92C14.16 21.6 14.36 21.43 14.4 21.19L14.76 18.65C15.35 18.41 15.89 18.09 16.38 17.71L18.77 18.67C19 18.75 19.24 18.67 19.36 18.45L21.28 15.13C21.4 14.91 21.34 14.66 21.16 14.52L19.14 12.94ZM12 15.6C10.02 15.6 8.4 13.98 8.4 12C8.4 10.02 10.02 8.4 12 8.4C13.98 8.4 15.6 10.02 15.6 12C15.6 13.98 13.98 15.6 12 15.6Z" fill="white"/>
+              </svg>
+            </div>
+            <h3>Operación y Mantenimiento</h3>
+            <p>Gestión integral de plantas, garantizando continuidad operativa y eficiencia máxima. Personal técnico certificado con disponibilidad 24/7 para respuesta inmediata.</p>
+          </div>
+
+          <!-- 5 · Monitoreo de Calidad -->
+          <div class="servicio-card">
+            <div class="servicio-icon">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                <path d="M3 3V21H21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M7 16L11 11L14 14L18 8" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="18" cy="8" r="2" fill="white"/>
+              </svg>
+            </div>
+            <h3>Monitoreo de Calidad</h3>
+            <p>Control y análisis permanente de parámetros físicoquímicos y microbiológicos del agua. Reportes en tiempo real con trazabilidad completa de cada muestra analizada.</p>
+          </div>
+
+          <!-- 6 · Consultoría Ambiental -->
+          <div class="servicio-card">
+            <div class="servicio-icon">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                <rect x="4" y="2" width="16" height="20" rx="2" stroke="white" stroke-width="2" fill="none"/>
+                <line x1="8" y1="7" x2="16" y2="7" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="8" y1="11" x2="16" y2="11" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="8" y1="15" x2="13" y2="15" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M15 17L17 19L21 15" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>Consultoría Ambiental</h3>
+            <p>Asesoría técnica especializada en normativa ambiental, permisos y gestión hídrica. Acompañamiento desde la concepción del proyecto hasta la obtención de licencias.</p>
+          </div>
+
+        </div>
+      </div>
+
+    </div><!-- /container -->
+
+    <!-- PROCESO DE TRABAJO -->
+    <div class="proceso-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Cómo Trabajamos</h2>
+        </div>
+        <div class="proceso-steps">
+
+          <div class="proceso-step">
+            <div class="paso-num">1</div>
+            <h4>Diagnóstico</h4>
+            <p>Evaluamos las condiciones actuales del agua y los requerimientos del cliente para definir el punto de partida.</p>
+          </div>
+
+          <div class="proceso-step">
+            <div class="paso-num">2</div>
+            <h4>Diseño</h4>
+            <p>Desarrollamos una solución técnica a medida con ingeniería certificada, memorias de cálculo y especificaciones detalladas.</p>
+          </div>
+
+          <div class="proceso-step">
+            <div class="paso-num">3</div>
+            <h4>Ejecución</h4>
+            <p>Instalamos y ponemos en marcha el sistema con estándares de calidad, cumpliendo tiempos y presupuesto acordados.</p>
+          </div>
+
+          <div class="proceso-step">
+            <div class="paso-num">4</div>
+            <h4>Seguimiento</h4>
+            <p>Monitoreamos el desempeño y brindamos soporte continuo post-entrega para garantizar resultados sostenidos.</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </section><!-- /page-content -->
+
+  <!-- STATS BAND -->
+  <section class="stats-band">
+    <div class="container stats-band-inner">
+      <div class="stats-band-header">
+        <h2>Nuestra Trayectoria en Números</h2>
+        <p>Más de una década transformando el acceso al agua en Colombia</p>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-item">
+          <h4>150+</h4>
+          <p>Proyectos<br>completados</p>
+        </div>
+        <div class="stat-item">
+          <h4>50K+</h4>
+          <p>Personas<br>beneficiadas</p>
+        </div>
+        <div class="stat-item">
+          <h4>15</h4>
+          <p>Años de<br>experiencia</p>
+        </div>
+        <div class="stat-item">
+          <h4>8</h4>
+          <p>Departamentos<br>cubiertos</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <!-- Footer -->
 <footer class="footer">
   <div class="container">
     <div class="footer-content">
-      <!-- Columna 1: Sobre nosotros -->
       <div class="footer-section">
         <h4>H2O COLOMBIA SAS</h4>
         <p>Soluciones integrales en tratamiento de agua. Comprometidos con la sostenibilidad y la calidad.</p>
@@ -59,8 +222,6 @@
           Autopista Medellín Km 7.8, Parque Innova, Bodega 2-3
         </p>
       </div>
-
-      <!-- Columna 2: Enlaces Rápidos -->
       <div class="footer-section">
         <h4>Enlaces Rápidos</h4>
         <ul class="footer-links">
@@ -70,8 +231,6 @@
           <li><a href="contacto.html">Contacto</a></li>
         </ul>
       </div>
-
-      <!-- Columna 3: Políticas -->
       <div class="footer-section">
         <h4>Políticas</h4>
         <ul class="footer-links">
@@ -82,12 +241,8 @@
         </ul>
       </div>
     </div>
-
-    <!-- Footer Bottom -->
     <div class="footer-bottom">
-      <p class="footer-copyright">
-        © 2026 H2O COLOMBIA SAS. Todos los derechos reservados.
-      </p>
+      <p class="footer-copyright">© 2026 H2O COLOMBIA SAS. Todos los derechos reservados.</p>
       <div class="footer-social">
         <a href="#" class="social-icon" title="Facebook">f</a>
         <a href="#" class="social-icon" title="LinkedIn">in</a>
@@ -99,16 +254,11 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="js/scripts.js"></script>
-    <!-- Scroll efecto navbar -->
-    <script>
-    window.addEventListener("scroll", function() {
-    let navbar = document.querySelector(".custom-navbar");
-    if (window.scrollY > 50) {
-        navbar.classList.add("scrolled");
-    } else {
-        navbar.classList.remove("scrolled");
-    }
-    });
-    </script>
+<script>
+  window.addEventListener('scroll', function () {
+    document.querySelector('.custom-navbar').classList.toggle('scrolled', window.scrollY > 50);
+  });
+</script>
+
 </body>
 </html>

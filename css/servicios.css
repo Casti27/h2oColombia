@@ -1,0 +1,494 @@
+/* ============================================
+   Servicios — H2O Colombia SAS
+   ============================================ */
+
+/* ---------- Navbar scroll ---------- */
+.custom-navbar.scrolled {
+    background: rgba(13, 59, 102, 0.95);
+}
+
+/* ============================================
+   HERO — centrado, texto directo sobre imagen
+   ============================================ */
+.page-hero {
+    position: relative;
+    height: 560px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+}
+
+.page-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(160deg,
+        rgba(5, 31, 53, 0.78) 0%,
+        rgba(0, 100, 180, 0.58) 50%,
+        rgba(27, 182, 201, 0.35) 100%);
+    z-index: 1;
+}
+
+/* Ola decorativa inferior */
+.page-hero::after {
+    content: '';
+    position: absolute;
+    bottom: -2px; left: 0; right: 0;
+    height: 80px;
+    background: #ffffff;
+    clip-path: ellipse(55% 100% at 50% 100%);
+    z-index: 2;
+}
+
+.page-hero .hero-content {
+    position: relative;
+    z-index: 3;
+    color: white;
+    max-width: 700px;
+    padding: 0 24px;
+}
+
+.page-hero .hero-eyebrow {
+    display: inline-block;
+    background: rgba(27, 182, 201, 0.3);
+    border: 1px solid rgba(27, 182, 201, 0.6);
+    color: #7de8f5;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 6px 20px;
+    border-radius: 30px;
+    margin-bottom: 24px;
+}
+
+.page-hero .hero-title {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.page-hero .hero-subtitle {
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.7;
+    max-width: 540px;
+    margin: 0 auto;
+}
+
+/* ============================================
+   CONTENIDO GENERAL
+   ============================================ */
+.page-content {
+    padding: 80px 0 0;
+    background: #ffffff;
+}
+
+/* ============================================
+   SECTION HEADER — título + línea acento
+   ============================================ */
+.section-header {
+    text-align: center;
+    margin-bottom: 52px;
+}
+
+.section-header h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #0d3b66;
+    margin-bottom: 0;
+}
+
+.section-header::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    margin: 14px auto 0;
+    border-radius: 2px;
+    background: linear-gradient(90deg, #1BB6C9, #0077b6);
+}
+
+/* ============================================
+   SERVICIOS GRID — 3x2 tarjetas blancas
+   ============================================ */
+.servicios-section {
+    margin-bottom: 100px;
+}
+
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.servicio-card {
+    background: #ffffff;
+    border: 1px solid #deeef8;
+    border-radius: 20px;
+    padding: 40px 32px 36px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 100, 180, 0.09);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Barra gradiente superior */
+.servicio-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #1BB6C9, #0077b6);
+    border-radius: 20px 20px 0 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.servicio-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 48px rgba(0, 100, 180, 0.16);
+    border-color: rgba(0, 168, 232, 0.35);
+}
+
+.servicio-card:hover::before {
+    opacity: 1;
+}
+
+/* Círculo de icono */
+.servicio-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #00c0e8 0%, #0077b6 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 26px;
+    box-shadow: 0 6px 18px rgba(0, 160, 210, 0.3);
+    flex-shrink: 0;
+}
+
+.servicio-card h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #0d3b66;
+    margin-bottom: 12px;
+}
+
+.servicio-card p {
+    color: #3a6a88;
+    font-size: 0.95rem;
+    line-height: 1.75;
+    margin: 0;
+}
+
+/* ============================================
+   PROCESO — pasos horizontales con línea
+   ============================================ */
+.proceso-section {
+    background: linear-gradient(160deg, #f0f8ff 0%, #e8f5fb 50%, #f7fbfe 100%);
+    padding: 90px 0 100px;
+    position: relative;
+    overflow: hidden;
+}
+
+.proceso-section::after {
+    content: '';
+    position: absolute;
+    top: -80px; right: -80px;
+    width: 320px; height: 320px;
+    border-radius: 50%;
+    border: 48px solid rgba(0, 168, 232, 0.06);
+    pointer-events: none;
+}
+
+.proceso-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    position: relative;
+    margin-top: 8px;
+}
+
+/* Línea punteada conectora */
+.proceso-steps::before {
+    content: '';
+    position: absolute;
+    top: 44px;
+    left: calc(12.5% + 8px);
+    right: calc(12.5% + 8px);
+    height: 2px;
+    background: repeating-linear-gradient(
+        90deg,
+        #1BB6C9 0px,
+        #1BB6C9 8px,
+        transparent 8px,
+        transparent 18px
+    );
+    z-index: 0;
+}
+
+.proceso-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.paso-num {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #00c0e8 0%, #0077b6 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.9rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 28px;
+    box-shadow: 0 8px 24px rgba(0, 160, 210, 0.35);
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.proceso-step:hover .paso-num {
+    transform: scale(1.08);
+    box-shadow: 0 12px 32px rgba(0, 160, 210, 0.45);
+}
+
+.proceso-step h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #0d3b66;
+    margin-bottom: 10px;
+}
+
+.proceso-step p {
+    color: #3a6a88;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin: 0;
+    max-width: 200px;
+}
+
+/* ============================================
+   STATS BAND — fondo oscuro full-width
+   ============================================ */
+.stats-band {
+    background: linear-gradient(135deg, #0d3b66 0%, #051f35 100%);
+    padding: 90px 0;
+    position: relative;
+    overflow: hidden;
+    margin-top: 0;
+}
+
+/* Ola superior blanca */
+.stats-band::before {
+    content: '';
+    position: absolute;
+    top: -2px; left: 0; right: 0;
+    height: 80px;
+    background: #f0f8ff;
+    clip-path: ellipse(55% 100% at 50% 0%);
+}
+
+/* Círculo decorativo de fondo */
+.stats-band::after {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px; height: 600px;
+    border-radius: 50%;
+    border: 60px solid rgba(27, 182, 201, 0.05);
+    pointer-events: none;
+}
+
+.stats-band-inner {
+    position: relative;
+    z-index: 1;
+}
+
+.stats-band-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.stats-band-header h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.stats-band-header p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1rem;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 40px 24px;
+    position: relative;
+}
+
+/* Separador vertical entre stats */
+.stat-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0; top: 25%; bottom: 25%;
+    width: 1px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.stat-item h4 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #1BB6C9;
+    margin: 0 0 10px;
+    line-height: 1;
+    letter-spacing: -2px;
+}
+
+.stat-item p {
+    color: rgba(255, 255, 255, 0.75);
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer {
+    background: linear-gradient(135deg, #0d3b66 0%, #051f35 100%);
+    color: white;
+    padding: 60px 0 30px;
+    border-top: 4px solid #00a8e8;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-section h4 {
+    color: #00a8e8;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.footer-section p,
+.footer-section a {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.footer-section a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.footer-section a:hover {
+    color: #00a8e8;
+    padding-left: 4px;
+}
+
+.footer-links { list-style: none; padding: 0; margin: 0; }
+.footer-links li { margin-bottom: 12px; }
+
+.footer-bottom {
+    border-top: 1px solid rgba(0, 168, 232, 0.2);
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-copyright { color: rgba(255, 255, 255, 0.7); font-size: 0.9rem; }
+.footer-social { display: flex; gap: 20px; }
+
+.social-icon {
+    width: 36px; height: 36px;
+    background: rgba(0, 168, 232, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #00a8e8;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background: #00a8e8;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 992px) {
+    .page-hero { height: 420px; }
+    .page-hero .hero-title { font-size: 2.8rem; }
+
+    .servicios-grid { grid-template-columns: repeat(2, 1fr); }
+
+    .proceso-steps {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 0;
+    }
+    .proceso-steps::before { display: none; }
+
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+
+    .footer-content { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+    .page-hero { height: 360px; }
+    .page-hero .hero-title { font-size: 2.2rem; }
+
+    .servicios-grid { grid-template-columns: 1fr; }
+
+    .proceso-steps {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .stat-item::after { display: none; }
+
+    .footer-content { grid-template-columns: 1fr; }
+    .footer-bottom { flex-direction: column; text-align: center; }
+}

@@ -1,0 +1,424 @@
+/* ============================================
+   Contacto — H2O Colombia SAS
+   ============================================ */
+
+/* ---------- Navbar — siempre oscura ---------- */
+.custom-navbar {
+    background: rgba(13, 59, 102, 0.95);
+}
+
+.custom-navbar.scrolled {
+    background: rgba(13, 59, 102, 0.95);
+}
+
+/* ============================================
+   HERO — mismo patrón que compromiso.html
+   ============================================ */
+.page-hero {
+    position: relative;
+    height: 560px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+}
+
+.page-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(160deg,
+        rgba(5, 31, 53, 0.75) 0%,
+        rgba(0, 100, 180, 0.55) 50%,
+        rgba(27, 182, 201, 0.35) 100%);
+    z-index: 1;
+}
+
+/* Ola blanca en la parte inferior */
+.page-hero::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: #ffffff;
+    clip-path: ellipse(55% 100% at 50% 100%);
+    z-index: 2;
+}
+
+.page-hero .hero-content {
+    position: relative;
+    z-index: 3;
+    color: white;
+    max-width: 700px;
+    padding: 0 24px;
+}
+
+.page-hero .hero-eyebrow {
+    display: inline-block;
+    background: rgba(27, 182, 201, 0.3);
+    border: 1px solid rgba(27, 182, 201, 0.6);
+    color: #7de8f5;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 6px 20px;
+    border-radius: 30px;
+    margin-bottom: 24px;
+}
+
+.page-hero .hero-title {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.page-hero .hero-subtitle {
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.7;
+    max-width: 540px;
+    margin: 0 auto;
+}
+
+/* ============================================
+   SECCIÓN CONTACTO
+   ============================================ */
+.contacto-section {
+    padding: 80px 0 100px;
+    background: #ffffff;
+}
+
+/* Grid de dos columnas */
+.contacto-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+/* ============================================
+   PANEL DEL FORMULARIO
+   ============================================ */
+.form-panel {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 48px;
+    border: 1px solid #deeef8;
+    box-shadow: 0 8px 40px rgba(0, 100, 180, 0.09);
+}
+
+.form-panel h2 {
+    color: #0d3b66;
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.form-panel .form-subtitle {
+    color: #3a6a88;
+    font-size: 0.95rem;
+    margin-bottom: 32px;
+}
+
+/* Labels */
+.form-panel .form-label {
+    color: #0d3b66;
+    font-weight: 600;
+    font-size: 0.88rem;
+    margin-bottom: 6px;
+}
+
+/* Inputs y textarea */
+.form-panel .form-control {
+    border: 1px solid #d0e8f5;
+    border-radius: 10px;
+    padding: 12px 16px;
+    font-size: 0.95rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-panel .form-control:focus {
+    border-color: #1BB6C9;
+    box-shadow: 0 0 0 3px rgba(27, 182, 201, 0.15);
+    outline: none;
+}
+
+/* Botón enviar */
+.form-panel .btn-h2o {
+    background: linear-gradient(135deg, #1BB6C9, #0077b6);
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: all 0.3s;
+    cursor: pointer;
+    width: 100%;
+}
+
+.form-panel .btn-h2o:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(27, 182, 201, 0.35);
+    color: white;
+}
+
+/* ============================================
+   PANEL DE INFORMACIÓN
+   ============================================ */
+.info-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Tarjetas de contacto */
+.info-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 28px;
+    border: 1px solid #deeef8;
+    box-shadow: 0 4px 20px rgba(0, 100, 180, 0.07);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: all 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 100, 180, 0.13);
+    border-color: rgba(0, 168, 232, 0.35);
+}
+
+/* Ícono circular con gradiente */
+.info-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #1BB6C9, #0077b6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 4px 14px rgba(27, 182, 201, 0.3);
+}
+
+/* Etiquetas en tarjetas */
+.info-card strong {
+    display: block;
+    color: #0d3b66;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+.info-card span,
+.info-card a {
+    color: #3a6a88;
+    font-size: 0.97rem;
+    text-decoration: none;
+    line-height: 1.6;
+}
+
+.info-card a:hover {
+    color: #0077b6;
+}
+
+/* Tarjeta de horario */
+.horario-card {
+    background: linear-gradient(160deg, #f0f8ff 0%, #e8f5fb 100%);
+    border-radius: 20px;
+    padding: 28px 32px;
+    border: 1px solid #deeef8;
+    box-shadow: 0 4px 20px rgba(0, 100, 180, 0.07);
+    transition: all 0.3s ease;
+}
+
+.horario-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 100, 180, 0.13);
+}
+
+.horario-card h4 {
+    color: #0d3b66;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.horario-card h4::before {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 18px;
+    border-radius: 2px;
+    background: linear-gradient(135deg, #1BB6C9, #0077b6);
+}
+
+.horario-card p {
+    color: #3a6a88;
+    font-size: 0.97rem;
+    line-height: 1.7;
+    margin-bottom: 6px;
+}
+
+.horario-card p:last-child {
+    margin-bottom: 0;
+}
+
+/* ============================================
+   FOOTER — mismo patrón que compromiso
+   ============================================ */
+.footer {
+    background: linear-gradient(135deg, #0d3b66 0%, #051f35 100%);
+    color: white;
+    padding: 60px 0 30px;
+    border-top: 4px solid #00a8e8;
+    margin-top: 0;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-section h4 {
+    color: #00a8e8;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.footer-section p,
+.footer-section a {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.footer-section a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.footer-section a:hover {
+    color: #00a8e8;
+    padding-left: 4px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(0, 168, 232, 0.2);
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-copyright {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+.footer-social {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icon {
+    width: 36px;
+    height: 36px;
+    background: rgba(0, 168, 232, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #00a8e8;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.social-icon:hover {
+    background: #00a8e8;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 992px) {
+    .page-hero {
+        height: 420px;
+    }
+
+    .page-hero .hero-title {
+        font-size: 2.8rem;
+    }
+
+    .contacto-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-panel {
+        padding: 32px 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-hero {
+        height: 360px;
+    }
+
+    .page-hero .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .contacto-section {
+        padding: 60px 0 80px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

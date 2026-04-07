@@ -6,10 +6,11 @@
   <title>Contacto - H2O COLOMBIA SAS</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/contacto.css">
 </head>
 <body>
 
-<!-- Navbar -->
+<!-- Navbar — scrolled hardcodeado: siempre oscura -->
 <nav class="navbar navbar-expand-lg custom-navbar fixed-top scrolled">
   <div class="container-fluid px-0">
     <div class="logo-container">
@@ -21,7 +22,9 @@
     <div class="collapse navbar-collapse justify-content-center" id="menu">
       <ul class="navbar-nav gap-lg-5 text-center">
         <li class="nav-item dropdown-custom">
-          <button class="nav-link qs-btn" type="button">QUIÉNES SOMOS <span class="dots">⋮</span></button>
+          <button class="nav-link qs-btn" type="button" aria-expanded="false" aria-haspopup="true">
+            QUIÉNES SOMOS <span class="dots">⋮</span>
+          </button>
           <div class="qs-menu" role="menu" aria-label="Quiénes somos">
             <a class="qs-item" href="marco-estrategico.html">Marco estratégico</a>
             <a class="qs-item" href="nuestra-trayectoria.html">Nuestra trayectoria</a>
@@ -33,60 +36,115 @@
       </ul>
     </div>
     <div class="contact-btn d-none d-lg-block me-4">
-      <a href="contacto.html" class="btn-contact">CONTACTO</a>
+      <a href="contacto.html" class="btn-contact" style="background-color:#1BB6C9;">CONTACTO</a>
     </div>
   </div>
 </nav>
 
-<main style="padding-top:110px;">
-  <section class="container py-5">
-    <div class="row g-5 align-items-stretch">
-      <div class="col-lg-6 mb-4 mb-lg-0">
-        <h1 class="mb-3">Contáctanos</h1>
-        <p class="lead">¿Tienes dudas, necesitas una cotización o soporte? Completa el formulario y te responderemos pronto.</p>
-        <form id="contactForm" class="p-4 rounded shadow-sm bg-white" style="max-width: 520px;" action="https://formspree.io/f/mnqewzqg" method="POST">
-          <div class="mb-3">
-            <label for="nombre" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Tu nombre" required>
-          </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">Correo electrónico</label>
-            <input type="email" class="form-control" id="email" name="email" placeholder="tucorreo@email.com" required>
-          </div>
-          <div class="mb-3">
-            <label for="telefono" class="form-label">Teléfono</label>
-            <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="Opcional">
-          </div>
-          <div class="mb-3">
-            <label for="mensaje" class="form-label">Mensaje</label>
-            <textarea class="form-control" id="mensaje" name="mensaje" rows="4" placeholder="¿En qué podemos ayudarte?" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-h2o w-100">Enviar mensaje</button>
-        </form>
-      </div>
-      <div class="col-lg-6 d-flex flex-column justify-content-center">
-        <div class="bg-light rounded p-4 h-100 shadow-sm mb-4 mb-lg-0">
-          <h4 class="mb-3 text-primary">Datos de contacto</h4>
-          <ul class="list-unstyled mb-4">
-            <li class="mb-2"><strong>Dirección:</strong> Autopista Medellín Km 7.8, Parque Innova, Bodega 2-3</li>
-            <li class="mb-2"><strong>Teléfono:</strong> <a href="tel:+573001234567" class="text-decoration-none text-dark">+57 300 123 4567</a></li>
-            <li class="mb-2"><strong>Email:</strong> <a href="mailto:info@h2ocolombia.com" class="text-decoration-none text-dark">info@h2ocolombia.com</a></li>
-          </ul>
-          <h5 class="mb-2">Horario de atención</h5>
-          <p class="mb-0">Lunes a Viernes: 8:00 am - 5:30 pm<br>Sábados: 8:00 am - 1:00 pm</p>
-        </div>
-        <div class="d-flex justify-content-lg-end justify-content-center">
-          <a href="index.html" class="btn btn-h2o mt-3">Volver al inicio</a>
-        </div>
-      </div>
+<main>
+
+  <!-- ── HERO ── -->
+  <section class="page-hero" style="background-image: url('https://images.unsplash.com/photo-1423666639041-f56000c27a9a?q=80&w=2000&auto=format&fit=crop');">
+    <div class="hero-content">
+      <span class="hero-eyebrow">Estamos aquí para ayudarte</span>
+      <h1 class="hero-title">Contáctanos</h1>
+      <p class="hero-subtitle">¿Tienes un proyecto en mente? Cuéntanos y nuestro equipo técnico te responderá en menos de 24 horas.</p>
     </div>
   </section>
+
+  <!-- ── SECCIÓN CONTACTO ── -->
+  <section class="contacto-section">
+    <div class="container">
+      <div class="contacto-grid">
+
+        <!-- COLUMNA IZQUIERDA: Formulario -->
+        <div class="form-panel">
+          <h2>Escríbenos</h2>
+          <p class="form-subtitle">Completa el formulario y te responderemos a la brevedad posible.</p>
+
+          <form id="contactForm" action="https://formspree.io/f/mnqewzqg" method="POST">
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Tu nombre" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Correo electrónico</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="tucorreo@email.com" required>
+            </div>
+            <div class="mb-3">
+              <label for="telefono" class="form-label">Teléfono</label>
+              <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="Opcional">
+            </div>
+            <div class="mb-3">
+              <label for="mensaje" class="form-label">Mensaje</label>
+              <textarea class="form-control" id="mensaje" name="mensaje" rows="4" placeholder="¿En qué podemos ayudarte?" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-h2o w-100">Enviar mensaje</button>
+          </form>
+        </div>
+
+        <!-- COLUMNA DERECHA: Información de contacto -->
+        <div class="info-panel">
+
+          <!-- Tarjeta dirección -->
+          <div class="info-card">
+            <div class="info-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z" fill="white"/>
+              </svg>
+            </div>
+            <div>
+              <strong>Dirección</strong>
+              <span>Autopista Medellín Km 7.8, Parque Innova, Bodega 2-3</span>
+            </div>
+          </div>
+
+          <!-- Tarjeta teléfono -->
+          <div class="info-card">
+            <div class="info-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.62 10.79C8.06 13.62 10.38 15.93 13.21 17.38L15.41 15.18C15.68 14.91 16.08 14.82 16.43 14.94C17.55 15.31 18.76 15.51 20 15.51C20.55 15.51 21 15.96 21 16.51V20C21 20.55 20.55 21 20 21C10.61 21 3 13.39 3 4C3 3.45 3.45 3 4 3H7.5C8.05 3 8.5 3.45 8.5 4C8.5 5.25 8.7 6.45 9.07 7.57C9.18 7.92 9.1 8.31 8.82 8.59L6.62 10.79Z" fill="white"/>
+              </svg>
+            </div>
+            <div>
+              <strong>Teléfono</strong>
+              <a href="tel:+573001234567">+57 300 123 4567</a>
+            </div>
+          </div>
+
+          <!-- Tarjeta email -->
+          <div class="info-card">
+            <div class="info-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z" fill="white"/>
+              </svg>
+            </div>
+            <div>
+              <strong>Email</strong>
+              <a href="mailto:info@h2ocolombia.com">info@h2ocolombia.com</a>
+            </div>
+          </div>
+
+          <!-- Tarjeta horario (sin ícono) -->
+          <div class="horario-card">
+            <h4>Horario de atención</h4>
+            <p>Lunes a Viernes: 8:00 am — 5:30 pm</p>
+            <p>Sábados: 8:00 am — 1:00 pm</p>
+          </div>
+
+        </div><!-- /info-panel -->
+
+      </div><!-- /contacto-grid -->
+    </div><!-- /container -->
+  </section>
+
 </main>
 
 <!-- Footer -->
 <footer class="footer">
   <div class="container">
     <div class="footer-content">
+
       <!-- Columna 1: Sobre nosotros -->
       <div class="footer-section">
         <h4>H2O COLOMBIA SAS</h4>
@@ -118,6 +176,7 @@
           <li><a href="#">Aviso Legal</a></li>
         </ul>
       </div>
+
     </div>
 
     <!-- Footer Bottom -->
@@ -136,12 +195,8 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="js/scripts.js"></script>
-<!-- SweetAlert2 -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
-// Navbar SIEMPRE oscura en contacto.html
-// Eliminar efecto de scroll para la navbar en esta vista
-// Confirmación de envío con SweetAlert
   document.addEventListener("DOMContentLoaded", function() {
     const form = document.getElementById("contactForm");
     if(form) {
@@ -183,5 +238,6 @@
     }
   });
 </script>
+
 </body>
 </html>

@@ -6,58 +6,230 @@
   <title>Proyectos - H2O COLOMBIA SAS</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/proyectos.css">
 </head>
 <body>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg custom-navbar fixed-top">
-  <div class="container-fluid px-0">
-    <div class="logo-container">
-      <img src="https://res.cloudinary.com/daib0eknj/image/upload/v1770840245/Logo_H2O_st7uih.png" alt="H2O Logo">
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg custom-navbar fixed-top">
+    <div class="container-fluid px-0">
+      <div class="logo-container">
+        <img src="https://res.cloudinary.com/daib0eknj/image/upload/v1770840245/Logo_H2O_st7uih.png" alt="H2O Logo">
+      </div>
+      <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="menu">
+        <ul class="navbar-nav gap-lg-5 text-center">
+          <li class="nav-item dropdown-custom">
+            <button class="nav-link qs-btn" type="button" aria-expanded="false" aria-haspopup="true">
+              QUIÉNES SOMOS <span class="dots">⋮</span>
+            </button>
+            <div class="qs-menu" role="menu" aria-label="Quiénes somos">
+              <a class="qs-item" href="marco-estrategico.html">Marco estratégico</a>
+              <a class="qs-item" href="nuestra-trayectoria.html">Nuestra trayectoria</a>
+              <a class="qs-item" href="compromiso.html">Compromiso</a>
+            </div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="servicios.html">SERVICIOS</a></li>
+          <li class="nav-item"><a class="nav-link active" href="proyectos.html">PROYECTOS</a></li>
+        </ul>
+      </div>
+      <div class="contact-btn d-none d-lg-block me-4">
+        <a href="contacto.html" class="btn-contact">CONTACTO</a>
+      </div>
     </div>
-    <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-center" id="menu">
-      <ul class="navbar-nav gap-lg-5 text-center">
-        <li class="nav-item dropdown-custom">
-          <button class="nav-link qs-btn" type="button">QUIÉNES SOMOS <span class="dots">⋮</span></button>
-                            <div class="qs-menu" role="menu" aria-label="Quiénes somos">
-                                <a class="qs-item" href="marco-estrategico.html">Marco estratégico</a>
-                                <a class="qs-item" href="nuestra-trayectoria.html">Nuestra trayectoria</a>
-                                <a class="qs-item" href="compromiso.html">Compromiso</a>
-                            </div>
-        </li>
-        <li class="nav-item"><a class="nav-link" href="servicios.html">SERVICIOS</a></li>
-        <li class="nav-item"><a class="nav-link" href="proyectos.html">PROYECTOS</a></li>
-      </ul>
+  </nav>
+
+<main>
+
+  <!-- ── HERO ── -->
+  <section class="page-hero" style="background-image: url('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?q=80&w=2000&auto=format&fit=crop');">
+    <div class="hero-content">
+      <span class="hero-eyebrow">Portafolio</span>
+      <h1 class="hero-title">Nuestros Proyectos</h1>
+      <p class="hero-subtitle">Más de 150 proyectos ejecutados en todo el territorio colombiano.</p>
     </div>
-    <div class="contact-btn d-none d-lg-block me-4">
-      <a href="contacto.html" class="btn-contact">CONTACTO</a>
+  </section>
+
+  <!-- ── FILTROS ── -->
+  <section class="filtros-section">
+    <div class="container">
+      <div class="filtros">
+        <button class="filtro-btn active" type="button">Todos</button>
+        <button class="filtro-btn" type="button">Industrial</button>
+        <button class="filtro-btn" type="button">Municipal</button>
+        <button class="filtro-btn" type="button">Comercial</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROYECTOS GRID ── -->
+  <section class="proyectos-section">
+    <div class="container">
+      <div class="proyectos-grid">
+
+        <!-- Proyecto 1 -->
+        <article class="proyecto-card">
+          <div class="proyecto-img" style="background-image: url('https://images.unsplash.com/photo-1504309092620-4d0ec726efa4?q=80&w=600&auto=format&fit=crop');">
+            <span class="proyecto-sector">Industrial</span>
+          </div>
+          <div class="proyecto-info">
+            <h3 class="proyecto-nombre">Planta de Tratamiento Sector Industrial</h3>
+            <p class="proyecto-lugar">Antioquia</p>
+            <p class="proyecto-desc">Diseño y construcción de planta de tratamiento para empresa manufacturera. Capacidad 500 m³/día.</p>
+            <a href="#" class="proyecto-link">Ver detalle →</a>
+          </div>
+        </article>
+
+        <!-- Proyecto 2 -->
+        <article class="proyecto-card">
+          <div class="proyecto-img" style="background-image: url('https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?q=80&w=600&auto=format&fit=crop');">
+            <span class="proyecto-sector">Comercial</span>
+          </div>
+          <div class="proyecto-info">
+            <h3 class="proyecto-nombre">Sistema de Ósmosis Inversa — Hospital</h3>
+            <p class="proyecto-lugar">Bogotá D.C.</p>
+            <p class="proyecto-desc">Implementación de sistema de agua ultrapura para laboratorios clínicos y áreas quirúrgicas.</p>
+            <a href="#" class="proyecto-link">Ver detalle →</a>
+          </div>
+        </article>
+
+        <!-- Proyecto 3 -->
+        <article class="proyecto-card">
+          <div class="proyecto-img" style="background-image: url('https://images.unsplash.com/photo-1548438294-1ad5d5f4f063?q=80&w=600&auto=format&fit=crop');">
+            <span class="proyecto-sector">Municipal</span>
+          </div>
+          <div class="proyecto-info">
+            <h3 class="proyecto-nombre">Tratamiento Aguas Residuales Municipal</h3>
+            <p class="proyecto-lugar">Valle del Cauca</p>
+            <p class="proyecto-desc">PTAR para municipio de 35.000 habitantes con tecnología de lodos activados.</p>
+            <a href="#" class="proyecto-link">Ver detalle →</a>
+          </div>
+        </article>
+
+        <!-- Proyecto 4 -->
+        <article class="proyecto-card">
+          <div class="proyecto-img" style="background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=600&auto=format&fit=crop');">
+            <span class="proyecto-sector">Industrial</span>
+          </div>
+          <div class="proyecto-info">
+            <h3 class="proyecto-nombre">Potabilización — Empresa Minera</h3>
+            <p class="proyecto-lugar">Boyacá</p>
+            <p class="proyecto-desc">Sistema de potabilización autónomo para campamento minero en zona remota, 120 m³/día.</p>
+            <a href="#" class="proyecto-link">Ver detalle →</a>
+          </div>
+        </article>
+
+        <!-- Proyecto 5 -->
+        <article class="proyecto-card">
+          <div class="proyecto-img" style="background-image: url('https://images.unsplash.com/photo-1581093804475-577d72e35323?q=80&w=600&auto=format&fit=crop');">
+            <span class="proyecto-sector">Industrial</span>
+          </div>
+          <div class="proyecto-info">
+            <h3 class="proyecto-nombre">Filtración Industrial — Zona Franca</h3>
+            <p class="proyecto-lugar">Cundinamarca</p>
+            <p class="proyecto-desc">Sistema de filtración multimedia y ablandamiento para proceso productivo en parque industrial.</p>
+            <a href="#" class="proyecto-link">Ver detalle →</a>
+          </div>
+        </article>
+
+        <!-- Proyecto 6 -->
+        <article class="proyecto-card">
+          <div class="proyecto-img" style="background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=600&auto=format&fit=crop');">
+            <span class="proyecto-sector">Comercial</span>
+          </div>
+          <div class="proyecto-info">
+            <h3 class="proyecto-nombre">Consultoría — Parque Empresarial</h3>
+            <p class="proyecto-lugar">Medellín</p>
+            <p class="proyecto-desc">Auditoría hídrica integral y plan de eficiencia para reducción del 35% en consumo de agua.</p>
+            <a href="#" class="proyecto-link">Ver detalle →</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ESTADÍSTICAS — band oscuro full-width ── -->
+  <section class="stats-band">
+    <div class="container stats-band-inner">
+      <div class="stats-band-header">
+        <h2>Nuestro Impacto en Cifras</h2>
+        <p>Resultados que respaldan años de trabajo en el sector hídrico colombiano</p>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-item">
+          <h4>150+</h4>
+          <p>Proyectos<br>ejecutados</p>
+        </div>
+        <div class="stat-item">
+          <h4>35%</h4>
+          <p>Reducción promedio<br>consumo hídrico</p>
+        </div>
+        <div class="stat-item">
+          <h4>8</h4>
+          <p>Departamentos<br>atendidos</p>
+        </div>
+        <div class="stat-item">
+          <h4>100%</h4>
+          <p>Clientes<br>satisfechos</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>H2O COLOMBIA SAS</h4>
+        <p>Soluciones integrales en tratamiento de agua. Comprometidos con la sostenibilidad y la calidad.</p>
+        <p style="margin-top: 15px;">
+          <strong>Dirección:</strong><br>
+          Autopista Medellín Km 7.8, Parque Innova, Bodega 2-3
+        </p>
+      </div>
+      <div class="footer-section">
+        <h4>Enlaces Rápidos</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="proyectos.html">Proyectos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Políticas</h4>
+        <ul class="footer-links">
+          <li><a href="#">Política de Privacidad</a></li>
+          <li><a href="#">Términos y Condiciones</a></li>
+          <li><a href="#">Política de Cookies</a></li>
+          <li><a href="#">Aviso Legal</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copyright">© 2026 H2O COLOMBIA SAS. Todos los derechos reservados.</p>
+      <div class="footer-social">
+        <a href="#" class="social-icon" title="Facebook">f</a>
+        <a href="#" class="social-icon" title="LinkedIn">in</a>
+        <a href="#" class="social-icon" title="Instagram">ig</a>
+      </div>
     </div>
   </div>
-</nav>
+</footer>
 
-<main style="padding-top:110px;">
-  <section class="container py-5">
-    <div class="d-flex justify-content-between align-items-start mb-4">
-      <div>
-        <h1 class="mb-1">Proyectos y Productos</h1>
-        <p class="lead mb-0">Explora nuestros productos. Haz click en cada tarjeta para ver más.</p>
-      </div>
-      <a href="index.html" class="btn btn-h2o ms-3">Volver al inicio</a>
-    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/scripts.js"></script>
+<script>
+  window.addEventListener('scroll', function () {
+    document.querySelector('.custom-navbar').classList.toggle('scrolled', window.scrollY > 50);
+  });
+</script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/scripts.js"></script>
-    <!-- Scroll efecto navbar -->
-    <script>
-    window.addEventListener("scroll", function() {
-    let navbar = document.querySelector(".custom-navbar");
-    if (window.scrollY > 50) {
-        navbar.classList.add("scrolled");
-    } else {
-        navbar.classList.remove("scrolled");
-    }
-    });
-    </script>
+</body>
+</html>
