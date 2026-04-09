@@ -6,7 +6,9 @@
       "WebFetch(domain:www.pexels.com)",
       "WebFetch(domain:pixabay.com)",
       "WebFetch(domain:api.unsplash.com)",
-      "Bash(grep -n \"<link rel=\\\\\"stylesheet\\\\\" href=\\\\\"css/style.css\\\\\">\" c:/Users/genoma/Documents/GitHub/h2oColombia/*.html)"
+      "Bash(grep -n \"<link rel=\\\\\"stylesheet\\\\\" href=\\\\\"css/style.css\\\\\">\" c:/Users/genoma/Documents/GitHub/h2oColombia/*.html)",
+      "Bash(grep -n \"src=\\\\\"http\" c:/Users/genoma/Documents/GitHub/h2oColombia/*.html)",
+      "Bash(grep -n \"url\\(\" c:/Users/genoma/Documents/GitHub/h2oColombia/*.html)"
     ]
   }
 }
