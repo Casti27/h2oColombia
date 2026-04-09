@@ -5,7 +5,8 @@
       "WebFetch(domain:unsplash.com)",
       "WebFetch(domain:www.pexels.com)",
       "WebFetch(domain:pixabay.com)",
-      "WebFetch(domain:api.unsplash.com)"
+      "WebFetch(domain:api.unsplash.com)",
+      "Bash(grep -n \"<link rel=\\\\\"stylesheet\\\\\" href=\\\\\"css/style.css\\\\\">\" c:/Users/genoma/Documents/GitHub/h2oColombia/*.html)"
     ]
   }
 }
