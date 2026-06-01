@@ -39,7 +39,7 @@
     content: '';
     position: absolute;
     bottom: -2px; left: 0; right: 0;
-    height: 40px;
+    height: 30px;
     background: #ffffff;
     clip-path: ellipse(55% 100% at 50% 100%);
     z-index: 2;
