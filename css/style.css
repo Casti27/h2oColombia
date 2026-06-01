@@ -45,16 +45,31 @@ h1, h2, h3, .nav-link, .qs-btn {
 }
 
 @media (max-width: 991.98px) {
-    .custom-navbar {
+    /* Fondo solo cuando el menú está abierto */
+    .custom-navbar:has(.navbar-collapse.show) {
         background: rgba(13, 59, 102, 0.95);
     }
 
-    .navbar-collapse {
-        background: rgba(13, 59, 102, 0.95);
-    }
-
+    /* Contenido del menú desplegable siempre oscuro al mostrarse */
     .navbar-collapse.show {
         background: rgba(13, 59, 102, 0.95);
+    }
+
+    /* Links equitativos en móvil */
+    .nav-link,
+    .qs-btn {
+        font-size: 0.82rem !important;
+        letter-spacing: 0.5px;
+        padding: 0.6rem 1rem !important;
+        height: auto;
+        line-height: 1.5;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .qs-item {
+        font-size: 0.82rem;
+        padding: 10px 18px;
     }
 }
 
