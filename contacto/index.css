@@ -397,6 +397,24 @@
     .form-panel {
         padding: 32px 24px;
     }
+
+    .info-panel {
+        gap: 16px;
+    }
+
+    .info-card {
+        padding: 20px;
+        gap: 16px;
+    }
+
+    .info-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .horario-card {
+        padding: 20px 24px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -408,8 +426,73 @@
         font-size: 2.2rem;
     }
 
+    .page-hero .hero-subtitle {
+        font-size: 1rem;
+    }
+
     .contacto-section {
-        padding: 60px 0 80px;
+        padding: 50px 0 60px;
+    }
+
+    .form-panel {
+        padding: 24px 16px;
+        border-radius: 16px;
+    }
+
+    .form-panel h2 {
+        font-size: 1.4rem;
+    }
+
+    .form-panel .form-label {
+        font-size: 0.8rem;
+    }
+
+    .form-panel .form-control {
+        padding: 10px 14px;
+        font-size: 0.9rem;
+    }
+
+    .info-panel {
+        gap: 12px;
+    }
+
+    .info-card {
+        padding: 16px;
+        gap: 12px;
+        border-radius: 16px;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .info-icon {
+        width: 44px;
+        height: 44px;
+    }
+
+    .info-card strong {
+        font-size: 0.8rem;
+        margin-bottom: 2px;
+    }
+
+    .info-card span,
+    .info-card a {
+        font-size: 0.9rem;
+    }
+
+    .horario-card {
+        padding: 16px 20px;
+        border-radius: 16px;
+    }
+
+    .horario-card h4 {
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+    }
+
+    .horario-card p {
+        font-size: 0.9rem;
+        margin-bottom: 4px;
     }
 
     .footer-content {
@@ -420,5 +503,90 @@
     .footer-bottom {
         flex-direction: column;
         align-items: flex-start;
+    }
+}
+
+@media (max-width: 576px) {
+    .page-hero {
+        height: 300px;
+    }
+
+    .page-hero .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .page-hero .hero-eyebrow {
+        font-size: 0.7rem;
+        padding: 4px 16px;
+    }
+
+    .contacto-section {
+        padding: 40px 0 50px;
+    }
+
+    .form-panel {
+        padding: 20px 14px;
+    }
+
+    .form-panel h2 {
+        font-size: 1.2rem;
+        margin-bottom: 6px;
+    }
+
+    .form-panel .form-subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 24px;
+    }
+
+    .form-panel .mb-3 {
+        margin-bottom: 16px !important;
+    }
+
+    .form-panel .btn-h2o {
+        padding: 12px;
+        font-size: 0.95rem;
+    }
+
+    .info-card {
+        padding: 14px;
+        gap: 10px;
+    }
+
+    .info-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .info-icon svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .info-card strong {
+        font-size: 0.75rem;
+    }
+
+    .info-card span,
+    .info-card a {
+        font-size: 0.85rem;
+    }
+
+    .horario-card {
+        padding: 14px 16px;
+    }
+
+    .horario-card h4 {
+        font-size: 0.85rem;
+        margin-bottom: 8px;
+    }
+
+    .horario-card h4::before {
+        width: 3px;
+        height: 16px;
+    }
+
+    .horario-card p {
+        font-size: 0.85rem;
+        margin-bottom: 3px;
     }
 }

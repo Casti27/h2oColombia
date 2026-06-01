@@ -471,37 +471,71 @@
 /* ============================================
    RESPONSIVE
    ============================================ */
+
+/* ── Tablet grande (≤992px) ── */
 @media (max-width: 992px) {
     .page-hero { height: 420px; }
     .page-hero .hero-title { font-size: 2.8rem; }
 
     .servicios-grid { grid-template-columns: repeat(2, 1fr); }
+    .servicios-section { margin-bottom: 60px; }
 
-    .proceso-steps {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 40px 0;
-    }
+    .proceso-steps { grid-template-columns: repeat(2, 1fr); gap: 40px 0; }
     .proceso-steps::before { display: none; }
 
+    .stats-band { padding: 60px 0 70px; }
+    .stats-band::before { height: 60px; }
+    .stats-band-header { margin-bottom: 40px; }
+    .stats-band-header h2 { font-size: 2rem; }
     .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .stat-item { padding: 32px 20px; }
+    .stat-item h4 { font-size: 3rem; }
+    .stat-item p { font-size: 0.9rem; }
+    .stat-item:not(:last-child)::after { display: none; }
 
     .footer-content { grid-template-columns: repeat(2, 1fr); }
 }
 
+/* ── Móvil (≤768px) ── */
 @media (max-width: 768px) {
     .page-hero { height: 360px; }
     .page-hero .hero-title { font-size: 2.2rem; }
 
     .servicios-grid { grid-template-columns: 1fr; }
+    .servicios-section { margin-bottom: 40px; }
 
-    .proceso-steps {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
+    .proceso-steps { grid-template-columns: 1fr; gap: 32px; }
 
+    .stats-band { padding: 46px 0 56px; }
+    .stats-band::before { height: 46px; }
+    .stats-band-header { margin-bottom: 28px; }
+    .stats-band-header h2 { font-size: 1.7rem; }
+    .stats-band-header p { font-size: 0.95rem; }
     .stats-grid { grid-template-columns: repeat(2, 1fr); }
-    .stat-item::after { display: none; }
+    .stat-item { padding: 24px 14px; text-align: center; }
+    .stat-item h4 { font-size: 2.4rem; letter-spacing: 0; }
+    .stat-item p { font-size: 0.88rem; line-height: 1.3; }
 
     .footer-content { grid-template-columns: 1fr; }
     .footer-bottom { flex-direction: column; text-align: center; }
+}
+
+/* ── Móvil pequeño (≤480px) ── */
+@media (max-width: 480px) {
+    .page-hero { height: 300px; }
+    .page-hero .hero-title { font-size: 1.8rem; }
+    .page-hero .hero-subtitle { font-size: 0.95rem; }
+    .page-hero .hero-eyebrow { font-size: 0.7rem; padding: 4px 14px; }
+
+    .proceso-section { padding: 60px 0 70px; }
+    .paso-num { width: 68px; height: 68px; font-size: 1.5rem; margin-bottom: 18px; }
+
+    .stats-band { padding: 36px 0 48px; }
+    .stats-band::before { height: 38px; }
+    .stats-band-header { margin-bottom: 22px; }
+    .stats-band-header h2 { font-size: 1.4rem; }
+    .stats-band-header p { font-size: 0.85rem; }
+    .stat-item { padding: 18px 10px; }
+    .stat-item h4 { font-size: 2rem; margin-bottom: 6px; }
+    .stat-item p { font-size: 0.82rem; line-height: 1.4; }
 }

@@ -545,31 +545,84 @@
 /* ============================================
    RESPONSIVE
    ============================================ */
+
+/* ── Tablet grande (≤992px) ── */
 @media (max-width: 992px) {
     .page-hero { height: 420px; }
     .page-hero .hero-title { font-size: 2.8rem; }
 
-    .pilares-grid { grid-template-columns: 1fr; }
+    .pilares-grid {
+        grid-template-columns: 1fr;
+        margin-bottom: 60px;
+    }
 
-    .valores-section { padding: 48px 24px; }
+    .valores-section {
+        padding: 48px 24px;
+        margin-bottom: 60px;
+    }
     .valores-grid { grid-template-columns: 1fr; }
 
     .image-text-section {
         grid-template-columns: 1fr;
         gap: 30px;
         padding: 36px 24px;
+        margin-bottom: 60px;
     }
 
+    .page-content { padding: 50px 0 40px; }
+
+    /* Stats */
+    .stats-band { padding: 60px 0 70px; }
+    .stats-band::before { height: 60px; }
+    .stats-band-header { margin-bottom: 40px; }
+    .stats-band-header h2 { font-size: 2rem; }
     .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .stat-item { padding: 32px 20px; }
+    .stat-item h4 { font-size: 3rem; }
     .stat-item + .stat-item::before { display: none; }
 
     .footer-content { grid-template-columns: 1fr 1fr; }
 }
 
+/* ── Móvil (≤768px) ── */
 @media (max-width: 768px) {
     .page-hero { height: 360px; }
     .page-hero .hero-title { font-size: 2.2rem; }
+
+    .page-content { padding: 40px 0 30px; }
+    .pilares-grid { margin-bottom: 40px; }
+    .valores-section { margin-bottom: 40px; }
+    .image-text-section { margin-bottom: 20px; }
+
+    /* Stats */
+    .stats-band { padding: 46px 0 56px; }
+    .stats-band::before { height: 46px; }
+    .stats-band-header { margin-bottom: 28px; }
+    .stats-band-header h2 { font-size: 1.7rem; }
+    .stats-band-header p { font-size: 0.95rem; }
     .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .stat-item { padding: 24px 14px; }
+    .stat-item h4 { font-size: 2.4rem; letter-spacing: 0; }
+    .stat-item p { font-size: 0.88rem; }
+
     .footer-content { grid-template-columns: 1fr; }
     .footer-bottom { flex-direction: column; text-align: center; }
+}
+
+/* ── Móvil pequeño (≤480px) ── */
+@media (max-width: 480px) {
+    .page-hero { height: 300px; }
+    .page-hero .hero-title { font-size: 1.8rem; }
+    .page-hero .hero-subtitle { font-size: 0.95rem; }
+    .page-hero .hero-eyebrow { font-size: 0.7rem; padding: 4px 14px; }
+
+    /* Stats */
+    .stats-band { padding: 36px 0 48px; }
+    .stats-band::before { height: 38px; }
+    .stats-band-header { margin-bottom: 22px; }
+    .stats-band-header h2 { font-size: 1.4rem; }
+    .stats-band-header p { font-size: 0.85rem; }
+    .stat-item { padding: 18px 10px; }
+    .stat-item h4 { font-size: 2rem; margin-bottom: 6px; }
+    .stat-item p { font-size: 0.82rem; line-height: 1.4; }
 }

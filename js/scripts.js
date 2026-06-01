@@ -71,6 +71,49 @@ function initScrollReveal() {
 
 document.addEventListener('DOMContentLoaded', initScrollReveal);
 
+/* ─── FILTRO DE PROYECTOS ─── */
+function initProyectosFilter() {
+    const filtrosContainer = document.querySelector('.filtros');
+    const proyectoCards = document.querySelectorAll('.proyecto-card');
+
+    if (!filtrosContainer || !proyectoCards.length) return;
+
+    const botones = filtrosContainer.querySelectorAll('.filtro-btn');
+
+    botones.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const filtroTexto = this.textContent.trim();
+
+            // Update active button
+            botones.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+
+            // Filter cards
+            proyectoCards.forEach(card => {
+                const sector = card.querySelector('.proyecto-sector').textContent.toLowerCase();
+                const mostrar =
+                    filtroTexto === 'Todos' ||
+                    sector.includes(filtroTexto.toLowerCase());
+
+                // Fade animation
+                card.style.transition = 'opacity 0.3s ease';
+                if (mostrar) {
+                    card.style.opacity = '0';
+                    setTimeout(() => {
+                        card.style.display = 'block';
+                        setTimeout(() => card.style.opacity = '1', 10);
+                    }, 150);
+                } else {
+                    card.style.opacity = '0';
+                    setTimeout(() => card.style.display = 'none', 300);
+                }
+            });
+        });
+    });
+}
+
+document.addEventListener('DOMContentLoaded', initProyectosFilter);
+
 // Dropdown personalizado 'QUIÉNES SOMOS'
 document.addEventListener('DOMContentLoaded', function() {
 	const qsBtn = document.querySelector('.qs-btn');
