@@ -642,7 +642,21 @@
     .page-hero { height: 360px; }
     .page-hero .hero-title { font-size: 2.2rem; }
 
+    .intro-text h2 { font-size: 1.7rem; }
+
+    /* Pilares */
+    .pilar-card { padding: 32px 22px; }
+    .pilar-card h3 { font-size: 1.2rem; }
+    .pilar-icon { width: 58px; height: 58px; }
+
+    /* Políticas */
     .politicas-grid { grid-template-columns: 1fr; }
+    .politicas-section { padding: 36px 16px; }
+    .politica-card { padding: 26px 18px; }
+    .politica-icon { width: 64px; height: 64px; }
+
+    /* Certs */
+    .cert-badge { padding: 20px; gap: 14px; }
 
     /* Stats */
     .stats-band { padding: 46px 0 56px; }
@@ -667,6 +681,28 @@
     .page-hero .hero-subtitle { font-size: 0.95rem; }
     .page-hero .hero-eyebrow { font-size: 0.7rem; padding: 4px 14px; }
 
+    .intro-text h2 { font-size: 1.4rem; }
+    .intro-text p { font-size: 0.95rem; }
+
+    /* Pilares */
+    .pilar-card { padding: 24px 16px; }
+    .pilar-card h3 { font-size: 1.05rem; }
+    .pilar-card p { font-size: 0.88rem; }
+    .pilar-icon { width: 50px; height: 50px; border-radius: 14px; }
+
+    /* Políticas */
+    .politicas-section { padding: 26px 12px; }
+    .politica-card { padding: 20px 14px; }
+    .politica-icon { width: 56px; height: 56px; font-size: 1.6rem; }
+    .politica-card h4 { font-size: 0.95rem; }
+    .politica-card p { font-size: 0.85rem; }
+
+    /* Certs */
+    .cert-badge { padding: 16px; gap: 12px; }
+    .cert-badge-text strong { font-size: 0.88rem; }
+    .cert-badge-text span { font-size: 0.8rem; }
+
+    /* Stats */
     .stats-band { padding: 36px 0 48px; }
     .stats-band::before { height: 38px; }
     .stats-band-header { margin-bottom: 22px; }

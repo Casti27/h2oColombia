@@ -890,7 +890,25 @@
     .page-hero { height: 360px; }
     .page-hero .hero-title { font-size: 2.2rem; }
 
-    .manifesto-headline { font-size: 1.75rem; }
+    /* Manifesto */
+    .manifesto-headline { font-size: 1.6rem; }
+    .manifesto-big-year { font-size: 3.5rem; }
+    .manifesto-visual { height: 150px; }
+    .intro-pillar { padding: 24px 18px; }
+    .intro-pillar h3 { font-size: 1.1rem; }
+    .intro-pillar p { font-size: 0.88rem; }
+
+    /* Prácticas */
+    .practicas-section { padding: 36px 16px; }
+    .practica-card { padding: 18px 14px; gap: 14px; }
+    .practica-icon { width: 50px; height: 50px; font-size: 1.4rem; }
+    .practica-texto h4 { font-size: 1rem; }
+    .practica-texto p { font-size: 0.88rem; }
+
+    /* Clima */
+    .clima-cita { padding: 32px 22px; }
+    .clima-cita::before { font-size: 7rem; top: -10px; }
+    .cita-texto { font-size: 1rem; }
 
     /* Stats */
     .stats-band { padding: 46px 0 56px; }
@@ -914,8 +932,29 @@
     .page-hero .hero-subtitle { font-size: 0.95rem; }
     .page-hero .hero-eyebrow { font-size: 0.7rem; padding: 4px 14px; }
 
-    .clima-cita { padding: 28px 20px; }
+    /* Manifesto */
+    .manifesto-headline { font-size: 1.35rem; }
+    .manifesto-big-year { font-size: 2.5rem; }
+    .manifesto-visual { height: 120px; }
+    .intro-pillar { padding: 18px 14px; }
+    .intro-pillar-icon { font-size: 2rem; margin-bottom: 10px; }
+    .intro-pillar h3 { font-size: 1rem; }
+    .intro-pillar p { font-size: 0.83rem; }
 
+    /* Prácticas */
+    .practicas-section { padding: 26px 12px; }
+    .practica-card { padding: 14px 12px; gap: 10px; }
+    .practica-icon { width: 42px; height: 42px; font-size: 1.1rem; }
+    .practica-texto h4 { font-size: 0.93rem; }
+    .practica-texto p { font-size: 0.83rem; }
+
+    /* Clima */
+    .clima-cita { padding: 24px 16px; }
+    .clima-cita::before { font-size: 5rem; top: -8px; left: 10px; }
+    .cita-texto { font-size: 0.9rem; line-height: 1.65; }
+    .cita-autor-avatar { width: 42px; height: 42px; }
+
+    /* Stats */
     .stats-band { padding: 36px 0 48px; }
     .stats-band::before { height: 38px; }
     .stats-band-header { margin-bottom: 22px; }

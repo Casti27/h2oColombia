@@ -594,6 +594,21 @@
     .valores-section { margin-bottom: 40px; }
     .image-text-section { margin-bottom: 20px; }
 
+    /* Pilares */
+    .pilar-num-card { padding: 28px 20px; }
+    .pilar-num-card h3 { font-size: 1.2rem; }
+    .section-header h2 { font-size: 1.7rem; }
+
+    /* Valores */
+    .valor-card { padding: 22px 18px; gap: 14px; }
+    .valor-emoji { font-size: 2rem; width: 44px; }
+    .valor-text h4 { font-size: 1rem; }
+    .valor-text p { font-size: 0.88rem; }
+
+    /* Imagen + texto */
+    .image-text-content h3 { font-size: 1.4rem; }
+    .image-text-content li { font-size: 0.9rem; padding: 8px 0 8px 26px; }
+
     /* Stats */
     .stats-band { padding: 46px 0 56px; }
     .stats-band::before { height: 46px; }
@@ -615,6 +630,24 @@
     .page-hero .hero-title { font-size: 1.8rem; }
     .page-hero .hero-subtitle { font-size: 0.95rem; }
     .page-hero .hero-eyebrow { font-size: 0.7rem; padding: 4px 14px; }
+
+    /* Pilares */
+    .pilar-num-card { padding: 22px 16px; }
+    .pilar-num-card h3 { font-size: 1.05rem; }
+    .pilar-num-card p { font-size: 0.88rem; }
+    .section-header h2 { font-size: 1.5rem; }
+
+    /* Valores */
+    .valores-section { padding: 32px 14px; }
+    .valor-card { padding: 16px 14px; gap: 12px; }
+    .valor-emoji { font-size: 1.7rem; width: 38px; }
+    .valor-text h4 { font-size: 0.93rem; }
+    .valor-text p { font-size: 0.83rem; }
+
+    /* Imagen + texto */
+    .image-text-section { padding: 24px 14px; }
+    .image-text-content h3 { font-size: 1.2rem; }
+    .image-text-content li { font-size: 0.85rem; }
 
     /* Stats */
     .stats-band { padding: 36px 0 48px; }
