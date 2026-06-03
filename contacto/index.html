@@ -12,7 +12,7 @@
 <body>
 
 <!-- Navbar — scrolled hardcodeado: siempre oscura -->
-<nav class="navbar navbar-expand-lg custom-navbar fixed-top scrolled">
+<nav class="navbar navbar-expand-lg custom-navbar fixed-top">
   <div class="container-fluid px-0">
     <div class="logo-container">
       <a href="/" style="line-height:0;display:block;"><img src="https://res.cloudinary.com/daib0eknj/image/upload/v1770840245/Logo_H2O_st7uih.png" alt="H2O Logo"></a>
@@ -45,7 +45,7 @@
 <main>
 
   <!-- ── HERO ── -->
-  <section class="page-hero" style="background-image: url('https://images.pexels.com/photos/4481326/pexels-photo-4481326.jpeg?auto=compress&cs=tinysrgb&w=2000');">
+  <section class="page-hero" style="background-image: url('https://res.cloudinary.com/daib0eknj/image/upload/v1778880123/ChatGPT_Image_15_may_2026_16_21_43_mdwfsi.png');">
     <div class="hero-content">
       <span class="hero-eyebrow">Estamos aquí para ayudarte</span>
       <h1 class="hero-title">Contáctanos</h1>
@@ -87,19 +87,6 @@
         <!-- COLUMNA DERECHA: Información de contacto -->
         <div class="info-panel">
 
-          <!-- Tarjeta dirección -->
-          <div class="info-card">
-            <div class="info-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z" fill="white"/>
-              </svg>
-            </div>
-            <div>
-              <strong>Dirección</strong>
-              <span>Autopista Medellín Km 7.8, Parque Innova, Bodega 2-3</span>
-            </div>
-          </div>
-
           <!-- Tarjeta teléfono -->
           <div class="info-card">
             <div class="info-icon">
@@ -126,17 +113,38 @@
             </div>
           </div>
 
-          <!-- Tarjeta horario (sin ícono) -->
-          <div class="horario-card">
-            <h4>Horario de atención</h4>
-            <p>Lunes a Viernes: 8:00 am — 5:30 pm</p>
-            <p>Sábados: 8:00 am — 1:00 pm</p>
+          <!-- Tarjeta dirección + mapa -->
+          <div class="info-card direccion-card">
+            <div class="direccion-mapa">
+              <iframe
+                src="https://www.google.com/maps?q=Parque+Industrial+Innova+Autopista+Medellin+Colombia&output=embed&z=16"
+                width="100%"
+                height="200"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Ubicación H2O Colombia SAS">
+              </iframe>
+            </div>
+            <div class="direccion-texto">
+              <div class="info-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z" fill="white"/>
+                </svg>
+              </div>
+              <div>
+                <strong>Dirección</strong>
+                <a href="https://maps.google.com/?q=Autopista+Medellín+Km+7.8+Parque+Innova+Bodega+2-3+Colombia" target="_blank" rel="noopener noreferrer">Autopista Medellín Km 7.8, Parque Innova, Bodega 1-2-3-6-7</a>
+              </div>
+            </div>
           </div>
 
         </div><!-- /info-panel -->
 
       </div><!-- /contacto-grid -->
     </div><!-- /container -->
+
   </section>
 
 </main>
@@ -149,10 +157,10 @@
       <!-- Columna 1: Sobre nosotros -->
       <div class="footer-section">
         <h4>H2O COLOMBIA SAS</h4>
-        <p>Soluciones integrales en tratamiento de agua. Comprometidos con la sostenibilidad y la calidad.</p>
+        <p>Empresa colombiana dedicada a la producción, maquila y embotellado de bebidas con altos estándares de calidad.</p>
         <p style="margin-top: 15px;">
           <strong>Dirección:</strong><br>
-          Autopista Medellín Km 7.8, Parque Innova, Bodega 2-3
+          Autopista Medellín Km 7.8, Parque Innova, Bodega 1-2-3-6-7
         </p>
       </div>
 
@@ -196,6 +204,11 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="/js/scripts.js"></script>
+<script>
+  window.addEventListener('scroll', function () {
+    document.querySelector('.custom-navbar').classList.toggle('scrolled', window.scrollY > 50);
+  });
+</script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
   document.addEventListener("DOMContentLoaded", function() {
