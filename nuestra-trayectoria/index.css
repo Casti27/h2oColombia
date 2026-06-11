@@ -777,12 +777,12 @@
         .clima-cita { padding: 44px 36px; }
 
         /* Stats */
-        .stats-band { padding: 60px 0 70px; }
+        .stats-band { padding: 90px 0 70px; }
         .stats-band::before { height: 60px; }
         .stats-band-header { margin-bottom: 40px; }
         .stats-band-header h2 { font-size: 2rem; }
         .stats-grid { grid-template-columns: repeat(2, 1fr); }
-        .stat-item { padding: 32px 20px; }
+        .stat-item { padding: 24px 20px; }
         .stat-item h4 { font-size: 3rem; }
         .stat-item p { font-size: 0.9rem; }
         .stat-item:not(:last-child)::after { display: none; }
@@ -814,13 +814,13 @@
         .cita-texto { font-size: 1rem; }
 
         /* Stats */
-        .stats-band { padding: 46px 0 56px; }
+        .stats-band { padding: 80px 0 56px; }
         .stats-band::before { height: 46px; }
-        .stats-band-header { margin-bottom: 28px; }
+        .stats-band-header { margin-bottom: 32px; }
         .stats-band-header h2 { font-size: 1.7rem; }
         .stats-band-header p { font-size: 0.95rem; }
-        .stats-grid { grid-template-columns: repeat(2, 1fr); }
-        .stat-item { padding: 24px 14px; text-align: center; }
+        .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 0; }
+        .stat-item { padding: 28px 16px; text-align: center; }
         .stat-item h4 { font-size: 2.4rem; letter-spacing: 0; }
         .stat-item p { font-size: 0.88rem; line-height: 1.3; }
     }
@@ -855,12 +855,13 @@
         .cita-autor-avatar { width: 42px; height: 42px; }
 
         /* Stats */
-        .stats-band { padding: 36px 0 48px; }
+        .stats-band { padding: 72px 0 48px; }
         .stats-band::before { height: 38px; }
-        .stats-band-header { margin-bottom: 22px; }
+        .stats-band-header { margin-bottom: 28px; }
         .stats-band-header h2 { font-size: 1.4rem; }
         .stats-band-header p { font-size: 0.85rem; }
-        .stat-item { padding: 18px 10px; }
+        .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 0; }
+        .stat-item { padding: 22px 12px; }
         .stat-item h4 { font-size: 2rem; margin-bottom: 6px; }
         .stat-item p { font-size: 0.82rem; line-height: 1.4; }
     }
