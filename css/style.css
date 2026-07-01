@@ -587,7 +587,7 @@ h1, h2, h3, .nav-link, .qs-btn {
 /* ============================= */
 .whatsapp-float {
     position: fixed;
-    bottom: 28px;
+    bottom: 96px;
     right: 28px;
     width: 58px;
     height: 58px;
@@ -612,7 +612,7 @@ h1, h2, h3, .nav-link, .qs-btn {
 /* ============================= */
 .form-float {
     position: fixed;
-    bottom: 100px;
+    bottom: 28px;
     right: 28px;
     background: linear-gradient(135deg, #1BB6C9 0%, #0077B6 100%);
     border-radius: 50px;
@@ -620,13 +620,12 @@ h1, h2, h3, .nav-link, .qs-btn {
     align-items: center;
     justify-content: flex-start;
     height: 58px;
-    width: 58px;
-    padding: 0 16px;
-    overflow: hidden;
+    width: auto;
+    padding: 0 20px 0 16px;
     white-space: nowrap;
     box-shadow: 0 4px 18px rgba(27, 182, 201, 0.45);
     z-index: 9999;
-    transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s ease;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
     text-decoration: none;
     color: #fff;
 }
@@ -642,19 +641,14 @@ h1, h2, h3, .nav-link, .qs-btn {
     white-space: nowrap;
     letter-spacing: 0.2px;
     margin-left: 9px;
-    opacity: 0;
-    transition: opacity 0.2s ease 0.15s;
+    opacity: 1;
 }
 
 .form-float:hover {
-    width: 215px;
     box-shadow: 0 6px 24px rgba(27, 182, 201, 0.6);
+    transform: scale(1.04);
     color: #fff;
     text-decoration: none;
-}
-
-.form-float:hover .form-float-text {
-    opacity: 1;
 }
 
 
