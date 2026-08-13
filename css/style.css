@@ -337,6 +337,46 @@ h1, h2, h3, .nav-link, .qs-btn {
     margin-bottom: 12px;
 }
 
+.policy-row {
+    display: flex;
+    align-items: flex-end;
+    gap: 4px;
+}
+
+.policy-row .footer-links {
+    flex: 1;
+    min-width: 0;
+}
+
+.legal-qr-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 86px;
+    margin-top: 18px;
+    margin-left: -2px;
+    flex-shrink: 0;
+}
+
+.legal-qr-box a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-qr {
+    width: 82px;
+    height: 82px;
+    object-fit: contain;
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 10px;
+    padding: 4px;
+    border: 1px solid rgba(0, 168, 232, 0.25);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    display: block;
+    flex-shrink: 0;
+}
+
 .footer-bottom {
     border-top: 1px solid rgba(0,168,232,0.2);
     padding-top: 30px;
