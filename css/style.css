@@ -335,6 +335,12 @@ h1, h2, h3, .nav-link, .qs-btn {
 
 .footer-links li {
     margin-bottom: 12px;
+    transition: all 0.3s ease;
+}
+
+.footer-links li:hover {
+    color: var(--primary);
+    padding-left: 4px;
 }
 
 .policy-row {
