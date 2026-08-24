@@ -344,9 +344,7 @@ h1, h2, h3, .nav-link, .qs-btn {
 }
 
 .policy-row {
-    display: flex;
-    align-items: flex-end;
-    gap: 4px;
+    display: block;
 }
 
 .policy-row .footer-links {
@@ -356,18 +354,12 @@ h1, h2, h3, .nav-link, .qs-btn {
 
 .legal-qr-box {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 86px;
-    margin-top: 18px;
-    margin-left: -2px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    min-height: auto;
+    margin-top: 8px;
+    margin-left: 0;
     flex-shrink: 0;
-}
-
-.legal-qr-box a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .footer-qr {
