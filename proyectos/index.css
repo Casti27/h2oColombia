@@ -239,6 +239,77 @@
 }
 
 /* ============================================
+   VIDEO FLOTANTE — presentación de productos
+   ============================================ */
+.video-float {
+    position: fixed;
+    right: 100px;
+    bottom: 112px;
+    width: min(330px, calc(100vw - 32px));
+    background: #ffffff;
+    border: 1px solid rgba(0, 119, 182, 0.18);
+    border-radius: 14px;
+    box-shadow: 0 16px 40px rgba(5, 31, 53, 0.24);
+    overflow: hidden;
+    z-index: 1030;
+    animation: video-float-in 0.5s ease both;
+}
+
+.video-float-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 11px 12px 11px 16px;
+    background: #0d3b66;
+    color: #ffffff;
+    font-size: 0.86rem;
+    font-weight: 700;
+}
+
+.video-float-close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 50%;
+    background: transparent;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.video-float-close:hover,
+.video-float-close:focus-visible {
+    background: #1BB6C9;
+    border-color: #1BB6C9;
+}
+
+.video-float-player {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #051f35;
+    object-fit: cover;
+}
+
+@keyframes video-float-in {
+    from {
+        opacity: 0;
+        transform: translateY(18px) scale(0.96);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* ============================================
    STATS BAND — fondo oscuro full-width
    ============================================ */
 .stats-band {
@@ -389,4 +460,9 @@
     .stat-item { padding: 22px 12px; }
     .stat-item h4 { font-size: 2rem; margin-bottom: 6px; }
     .stat-item p { font-size: 0.82rem; line-height: 1.4; }
+
+    .video-float {
+        right: 16px;
+        bottom: 170px;
+    }
 }

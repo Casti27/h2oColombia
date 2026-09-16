@@ -114,6 +114,22 @@ function initProyectosFilter() {
 
 document.addEventListener('DOMContentLoaded', initProyectosFilter);
 
+/* ─── VIDEO FLOTANTE DE PRODUCTOS ─── */
+function initFloatingVideo() {
+    const videoFloat = document.querySelector('.video-float');
+    const closeButton = document.querySelector('.video-float-close');
+    const video = document.querySelector('.video-float-player');
+
+    if (!videoFloat || !closeButton) return;
+
+    closeButton.addEventListener('click', function() {
+        if (video) video.pause();
+        videoFloat.remove();
+    });
+}
+
+document.addEventListener('DOMContentLoaded', initFloatingVideo);
+
 // Dropdown personalizado 'QUIÉNES SOMOS'
 document.addEventListener('DOMContentLoaded', function() {
 	const qsBtn = document.querySelector('.qs-btn');
