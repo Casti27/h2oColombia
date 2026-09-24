@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0d3b66">
+  <meta name="description" content="Tarjeta digital de contacto de H2O Colombia.">
+  <title>Juan Felipe García | H2O Colombia</title>
+  <link rel="icon" type="image/png" href="https://res.cloudinary.com/daib0eknj/image/upload/q_auto/f_auto/v1770840245/Logo_H2O_st7uih.png">
+  <style>
+    :root {
+      --navy: #0d3b66;
+      --blue: #0077b6;
+      --cyan: #1bb6c9;
+      --ink: #17324d;
+      --muted: #607386;
+      --line: #dce7ef;
+      --surface: #ffffff;
+      --canvas: #eef5f8;
+      --shadow: 0 22px 55px rgba(13, 59, 102, .14);
+      --radius: 24px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { min-width: 320px; background: var(--canvas); }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 0 0, rgba(27, 182, 201, .18), transparent 34rem),
+        linear-gradient(145deg, #eef8fa 0%, #f7fafb 47%, #e8f1f6 100%);
+      font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; }
+
+    .page {
+      width: min(100% - 32px, 480px);
+      margin: 0 auto;
+      padding: max(24px, env(safe-area-inset-top)) 0 max(24px, env(safe-area-inset-bottom));
+    }
+
+    .card {
+      overflow: hidden;
+      background: var(--surface);
+      border: 1px solid rgba(255, 255, 255, .8);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .brand-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      min-height: 116px;
+      padding: 20px 24px;
+      background: var(--navy);
+      background-image: linear-gradient(120deg, #0d3b66, #075a8d 60%, #0077b6);
+    }
+
+    .brand-bar a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 auto;
+      width: 132px;
+    }
+
+    .brand-bar img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .brand-name {
+      flex: 1;
+      color: #fff;
+      font-size: .92rem;
+      font-weight: 700;
+      letter-spacing: .04em;
+      line-height: 1.3;
+      text-align: right;
+    }
+
+    .brand-name strong {
+      display: block;
+      color: #8eeaf0;
+      font-size: 1.08rem;
+      letter-spacing: .01em;
+    }
+
+    .online {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      color: #d9f8fa;
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .online::before {
+      width: 7px;
+      height: 7px;
+      content: "";
+      border-radius: 50%;
+      background: #66e0d1;
+      box-shadow: 0 0 0 4px rgba(102, 224, 209, .14);
+    }
+
+    .profile { padding: 30px 24px 24px; text-align: center; }
+
+    .avatar-wrap {
+      width: 112px;
+      height: 112px;
+      margin: -76px auto 17px;
+      padding: 5px;
+      border-radius: 50%;
+      background: var(--surface);
+      box-shadow: 0 10px 26px rgba(13, 59, 102, .16);
+    }
+
+    .avatar {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      background: #dff5f6;
+    }
+
+    h1 { margin: 0; color: var(--navy); font-size: clamp(1.65rem, 7vw, 2rem); line-height: 1.1; }
+
+    .role { margin: 8px 0 0; color: var(--blue); font-size: .98rem; font-weight: 700; }
+    .intro { max-width: 35ch; margin: 14px auto 0; color: var(--muted); font-size: .92rem; line-height: 1.55; }
+
+    .actions {
+      display: grid;
+      gap: 11px;
+      padding: 0 24px 26px;
+    }
+
+    .action {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 52px;
+      padding: 13px 18px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      color: var(--navy);
+      background: #fff;
+      font-size: .94rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+
+    .action:hover, .action:focus-visible { transform: translateY(-2px); box-shadow: 0 8px 18px rgba(13, 59, 102, .12); }
+    .action:focus-visible { outline: 3px solid rgba(27, 182, 201, .35); outline-offset: 2px; }
+    .action.primary { border-color: var(--blue); color: #fff; background: var(--blue); box-shadow: 0 8px 17px rgba(0, 119, 182, .2); }
+    .action.whatsapp { border-color: #c4eadb; color: #11734d; background: #effbf6; }
+    .action svg { flex: 0 0 auto; width: 19px; height: 19px; fill: currentColor; }
+
+    .contact-strip {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      padding: 19px 24px;
+      border-top: 1px solid #edf2f5;
+      background: #fbfdfe;
+    }
+
+    .contact-link { min-width: 0; color: var(--muted); font-size: .78rem; text-decoration: none; }
+    .contact-link strong { display: block; margin-bottom: 4px; color: var(--navy); font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; }
+    .contact-link span { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .footer { padding: 18px 10px 0; color: #718493; text-align: center; font-size: .72rem; line-height: 1.5; }
+    .footer a { color: var(--blue); font-weight: 700; text-decoration: none; }
+
+    @media (min-width: 600px) {
+      .page { padding-top: 48px; padding-bottom: 48px; }
+      .brand-bar { min-height: 126px; padding-inline: 32px; }
+      .profile, .actions { padding-inline: 32px; }
+      .contact-strip { padding-inline: 32px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="card" aria-label="Tarjeta digital de contacto">
+      <header class="brand-bar">
+        <a href="https://h2ocolombia.com" aria-label="Visitar H2O Colombia">
+          <img src="https://res.cloudinary.com/daib0eknj/image/upload/e_background_removal/v1770840245/Logo_H2O_st7uih.png" alt="H2O Colombia">
+        </a>
+        <div class="brand-name">
+          <strong>H2O COLOMBIA SAS</strong>
+          Tarjeta digital de contacto
+        </div>
+      </header>
+
+      <section class="profile">
+        <div class="avatar-wrap">
+          <svg class="avatar" viewBox="0 0 320 320" role="img" aria-label="Avatar ilustrado de Juan Felipe García">
+            <rect width="320" height="320" fill="#dff5f6"/>
+            <circle cx="160" cy="118" r="54" fill="#fff" stroke="#0077b6" stroke-width="8"/>
+            <circle cx="141" cy="112" r="6" fill="#0d3b66"/>
+            <circle cx="179" cy="112" r="6" fill="#0d3b66"/>
+            <path d="M143 137 Q160 149 177 137" fill="none" stroke="#0d3b66" stroke-width="7" stroke-linecap="round"/>
+            <path d="M160 173 V238 M160 193 L111 226 M160 193 L209 226 M160 238 L124 290 M160 238 L196 290" fill="none" stroke="#0d3b66" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h1>Juan Felipe García</h1>
+        <p class="role">Desarrollo &amp; Soporte Técnico</p>
+        <p class="intro">H2O Colombia · Soluciones y acompañamiento para hacer crecer tu proyecto.</p>
+      </section>
+
+      <nav class="actions" aria-label="Acciones de contacto">
+        <a class="action primary" href="#" id="save-contact" download="juan-felipe-garcia-h2o.vcf">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7l-4-4Zm-5 16a3 3 0 1 1 0-6 3 3 0 0 1 0 6Zm3-10H5V5h10v4Z"/></svg>
+          Guardar contacto
+        </a>
+        <a class="action whatsapp" href="https://wa.me/573193865914?text=Hola%20Juan%20Felipe%2C%20vi%20tu%20tarjeta%20digital%20de%20H2O%20Colombia." target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.9c0 2.1.5 4.1 1.6 5.9L.2 24l6.4-1.7a11.8 11.8 0 0 0 5.5 1.4h.1c6.5 0 11.8-5.3 11.8-11.9 0-3.1-1.2-6.1-3.5-8.3Zm-8.4 18.2h-.1a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.8 1 1-3.7-.2-.4a9.8 9.8 0 0 1-1.5-5.2c0-5.4 4.4-9.9 9.9-9.9 2.6 0 5.1 1 7 2.9a9.8 9.8 0 0 1 2.9 7c0 5.5-4.4 9.9-9.8 9.9Zm5.4-7.4c-.3-.1-1.8-.9-2.1-1-.3-.1-.5-.1-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-1.8-.9-3-1.6-4.2-3.6-.3-.5.3-.5.9-1.6.1-.2.1-.4 0-.5-.1-.1-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1.1 1.1-1.1 2.6s1.1 3 1.2 3.2c.2.2 2.1 3.2 5.1 4.5 1.9.8 2.3.7 3.1.6.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.3-.6-.4Z"/></svg>
+          WhatsApp
+        </a>
+        <a class="action" href="https://h2ocolombia.com" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm6.9 9h-3a15.7 15.7 0 0 0-1.2-5 8 8 0 0 1 4.2 5ZM12 4c.8 1.1 1.6 3 1.9 5h-3.8c.3-2 1.1-3.9 1.9-5ZM9.3 6a15.7 15.7 0 0 0-1.2 5h-3a8 8 0 0 1 4.2-5ZM5.1 13h3a15.7 15.7 0 0 0 1.2 5 8 8 0 0 1-4.2-5Zm6.9 7c-.8-1.1-1.6-3-1.9-5h3.8c-.3 2-1.1 3.9-1.9 5Zm2.7-2a15.7 15.7 0 0 0 1.2-5h3a8 8 0 0 1-4.2 5Z"/></svg>
+          Sitio web
+        </a>
+        <a class="action" href="/assets/brochure-h2o-colombia.pdf" target="_blank" rel="noopener noreferrer" download>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V8l-6-6Zm1 7V3.5L18.5 9H15ZM8 13h8v1.5H8V13Zm0 3h8v1.5H8V16Z"/></svg>
+          Descargar brochure
+        </a>
+      </nav>
+
+      <footer class="contact-strip">
+        <a class="contact-link" href="mailto:info@h2ocolombia.com"><strong>Correo</strong><span>info@h2ocolombia.com</span></a>
+        <a class="contact-link" href="tel:+573193865914"><strong>Teléfono</strong><span>+57 319 386 5914</span></a>
+      </footer>
+    </section>
+    <p class="footer">H2O Colombia SAS · <a href="https://h2ocolombia.com" target="_blank" rel="noopener noreferrer">h2ocolombia.com</a></p>
+  </main>
+
+  <script>
+    // Genera una vCard compatible con iOS, Android y agendas de escritorio.
+    const contact = {
+      firstName: "Juan Felipe",
+      lastName: "García",
+      organization: "H2O Colombia SAS",
+      title: "Desarrollo & Soporte Técnico",
+      phone: "+573193865914",
+      email: "info@h2ocolombia.com",
+      website: "https://h2ocolombia.com"
+    };
+
+    // Escapa caracteres que tienen un significado especial dentro de una vCard.
+    function escapeVCard(value) {
+      return value.replace(/([\\,;])/g, "\\$1").replace(/\r?\n/g, "\\n");
+    }
+
+    function buildVCard() {
+      const fullName = `${contact.firstName} ${contact.lastName}`;
+      return [
+        "BEGIN:VCARD",
+        "VERSION:3.0",
+        `N:${escapeVCard(contact.lastName)};${escapeVCard(contact.firstName)};;;`,
+        `FN:${escapeVCard(fullName)}`,
+        `ORG:${escapeVCard(contact.organization)}`,
+        `TITLE:${escapeVCard(contact.title)}`,
+        `TEL;TYPE=CELL:${contact.phone}`,
+        `EMAIL;TYPE=WORK:${contact.email}`,
+        `URL:${contact.website}`,
+        "END:VCARD"
+      ].join("\r\n");
+    }
+
+    document.getElementById("save-contact").addEventListener("click", (event) => {
+      event.preventDefault();
+      const file = new Blob([buildVCard()], { type: "text/vcard;charset=utf-8" });
+      const downloadUrl = URL.createObjectURL(file);
+      const downloadLink = document.createElement("a");
+      downloadLink.href = downloadUrl;
+      downloadLink.download = "juan-felipe-garcia-h2o.vcf";
+      document.body.appendChild(downloadLink);
+      downloadLink.click();
+      downloadLink.remove();
+      URL.revokeObjectURL(downloadUrl);
+    });
+  </script>
+</body>
+</html>
