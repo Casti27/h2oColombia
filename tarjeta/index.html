@@ -256,8 +256,13 @@
     const whatsappMessage = `Hola ${contact.firstName} ${contact.lastName}, vi tu tarjeta digital de H2O Colombia.`;
 
     document.title = `${fullName} | H2O Colombia`;
-    document.querySelector(".avatar").src = contact.avatar;
-    document.querySelector(".avatar").alt = `Fotografía de ${fullName}`;
+    const avatar = document.querySelector(".avatar");
+    if (contact.avatar) {
+      avatar.src = contact.avatar;
+      avatar.alt = `Fotografía de ${fullName}`;
+    } else {
+      avatar.closest(".avatar-wrap").hidden = true;
+    }
     document.querySelector("h1").textContent = fullName;
     document.querySelector(".role").textContent = contact.title;
     const intro = document.querySelector(".intro");

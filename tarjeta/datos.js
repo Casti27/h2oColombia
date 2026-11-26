@@ -46,5 +46,17 @@ const colaboradores = {
     vcfFile: "luis-hernando-ortiz-quin-h2o.vcf",
     organization: "H2O Colombia SAS",
     website: "https://h2ocolombia.com"
+  },
+  ricardo: {
+    firstName: "Ricardo",
+    lastName: "Aragon Rodriguez",
+    title: "Controller",
+    intro: "H2O Colombia\nSoluciones y acompañamiento para hacer realidad tu proyecto.",
+    phone: "+573233268356",
+    email: "controller@h2ocolombia.com",
+    avatar: "",
+    vcfFile: "ricardo-aragon-rodriguez-h2o.vcf",
+    organization: "H2O Colombia SAS",
+    website: "https://h2ocolombia.com"
   }
 };
