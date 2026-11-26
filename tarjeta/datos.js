@@ -34,5 +34,17 @@ const colaboradores = {
     vcfFile: "juan-carlos-bravo-h2o.vcf",
     organization: "H2O Colombia SAS",
     website: "https://h2ocolombia.com"
+  },
+  luis: {
+    firstName: "Luis Hernando",
+    lastName: "Ortiz Quin",
+    title: "Gerencia de operación",
+    intro: "H2O Colombia\nSoluciones y acompañamiento para hacer realidad tu proyecto.",
+    phone: "+573108855058",
+    email: "geroperaciones@h2ocolombia.com",
+    avatar: "https://res.cloudinary.com/daib0eknj/image/upload/v1795716700/WhatsApp_Image_2026-09-30_at_6.08.43_PM_caeqqo.jpg",
+    vcfFile: "luis-hernando-ortiz-quin-h2o.vcf",
+    organization: "H2O Colombia SAS",
+    website: "https://h2ocolombia.com"
   }
 };
